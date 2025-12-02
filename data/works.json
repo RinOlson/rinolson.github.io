@@ -1,1 +1,43 @@
-[]
+[
+  {
+    "filename": "american-goldfinch.png",
+    "year": 2022,
+    "title": "American Goldfinch",
+    "media": "Oil on canvas",
+    "dimensions": "15 in x 14 in",
+    "alt_text": "abstract blue landscape"
+  },
+  {
+    "filename": "orange-headed-thrush.png",
+    "year": 2022,
+    "title": "Orange-headed Thrush",
+    "media": "Oil on canvas",
+    "dimensions": "12 in x 13 in",
+    "alt_text": "abstract pink cityscape"
+  },
+  {
+    "filename": "lesser-goldfinch-blue-mountain.jpg",
+    "year": 2022,
+    "title": "Lesser Goldfinch (blue mountain)",
+    "media": "Oil on cardboard",
+    "dimensions": "9 in x 9 in",
+    "alt_text": "abstract blue mountain scene"
+  },
+  {
+    "filename": "lesser-goldfinch-red-sky.jpg",
+    "year": 2022,
+    "title": "Lesser Goldfinch (red sky)",
+    "media": "Oil on leather",
+    "dimensions": "7 in x 10 in",
+    "alt_text": "abstract red landscape"
+  },
+  {
+    "filename": "violet-green-swallow.png",
+    "year": 2023,
+    "title": "Violet-green Swallow",
+    "media": "Oil on canvas",
+    "dimensions": "14 in x 15 in",
+    "alt_text": "abstract landscape"
+  }
+]
+
