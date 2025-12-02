@@ -84,6 +84,61 @@
   color: black;          /* more visible against white */
   cursor: pointer;
 }
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  flex-wrap: wrap; /* allows wrapping on smaller screens */
+  gap: 10px;       /* spacing between elements when wrapped */
+  background: #F6F5F0; /* optional, match site background */
+}
+
+.site-header > div {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* space between selector and button */
+}
+
+#year-filter {
+  font-size: 14px;
+  padding: 4px 8px;
+  font-family: Arial, sans-serif;
+}
+
+#all-works-btn {
+  font-size: 14px;
+  padding: 4px 10px;
+  font-family: Arial, sans-serif;
+  cursor: pointer;
+  background: white;
+  border: 1px solid black;
+}
+  
+.site-header nav {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* spacing between links */
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+.site-header nav a {
+  text-decoration: none;
+  color: black;
+}
+
+.site-header nav a:hover {
+  text-decoration: underline;
+}
+  
+@media (max-width: 600px) {
+  .site-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
   
 </style>
     
