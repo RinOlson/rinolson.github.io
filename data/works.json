@@ -16,28 +16,372 @@
     "alt_text": "abstract pink cityscape"
   },
   {
-    "filename": "lesser-goldfinch-blue-mountain.jpg",
+    "filename": "transcription-of-a-bassian-thrush.jpg",
     "year": 2022,
-    "title": "Lesser Goldfinch (blue mountain)",
-    "media": "Oil on cardboard",
+    "title": "Transcription of a Bassian Thrush",
+    "media": "Oil on canvas",
+    "dimensions": "12 in x 13 in",
+    "alt_text": "abstract still life with bottle"
+  },
+  {
+    "filename": "transcription-of-an-indian-pitta.png",
+    "year": 2022,
+    "title": "Transcription of an Indian Pitta",
+    "media": "Oil on canvas stretched in found mirror frame",
+    "dimensions": "22 in x 29 in",
+    "alt_text": "abstract red sky, blue mountain"
+  },
+  {
+    "filename": "also-a-lapland-longspur.jpg",
+    "year": 2022,
+    "title": "Also a Lapland Longspur",
+    "media": "Oil on canvas",
+    "dimensions": "13 in x 12 in",
+    "alt_text": "abstract landscape"
+  },
+  {
+    "filename": "also-a-european-starling.jpg",
+    "year": 2022,
+    "title": "Also a European Starling",
+    "media": "Oil and thread on canvas",
+    "dimensions": "13 in x 12 in",
+    "alt_text": "abstract landscape"
+  },
+    {
+    "filename": "transcription-of-a-cackling-goose.jpg",
+    "year": 2022,
+    "title": "Transcription of a Cackling Goose",
+    "media": "Oil and ink on canvas",
+    "dimensions": "13 in x 12 in",
+    "alt_text": "abstract landscape"
+  },
+    {
+    "filename": "transcription-of-a-european-starling.jpg",
+    "year": 2022,
+    "title": "Transcription of a European Starling",
+    "media": "Oil and thread on canvas",
+    "dimensions": "17 in x 20 in",
+    "alt_text": "abstract landscape"
+  },
+    {
+    "filename": "pine-siskin.jpg",
+    "year": 2022,
+    "title": "Pine Siskin",
+    "media": "Oil on unstretched canvas",
     "dimensions": "9 in x 9 in",
-    "alt_text": "abstract blue mountain scene"
+    "alt_text": "abstract landscape"
   },
-  {
-    "filename": "lesser-goldfinch-red-sky.jpg",
+    {
+    "filename": "bewicks-wren.jpg",
     "year": 2022,
-    "title": "Lesser Goldfinch (red sky)",
-    "media": "Oil on leather",
-    "dimensions": "7 in x 10 in",
-    "alt_text": "abstract red landscape"
+    "title": "Bewick's Wren",
+    "media": "Oil on unstretched canvas",
+    "dimensions": "12 in x 14 in",
+    "alt_text": "abstract still life"
   },
-  {
+    {
+    "filename": "lapland-longspur.jpg",
+    "year": 2022,
+    "title": "Lapland Longspur",
+    "media": "Oil on paper",
+    "dimensions": "22.5 in x 30 in",
+    "alt_text": "abstract landscape"
+  },
+    {
+    "filename": "morelets-seedeater",
+    "year": 2022,
+    "title": "Morelet's Seedeater",
+    "media": "Oil on unstretched canvas",
+    "dimensions": "13 in x 16 in",
+    "alt_text": "abstract still life"
+  },
+    {
     "filename": "violet-green-swallow.png",
     "year": 2023,
     "title": "Violet-green Swallow",
     "media": "Oil on canvas",
     "dimensions": "14 in x 15 in",
     "alt_text": "abstract landscape"
+  },
+    {
+    "filename": "american-tree-sparrow.png",
+    "year": 2023,
+    "title": "American Tree Sparrow",
+    "media": "Oil on canvas",
+    "dimensions": "14 in x 15 in",
+    "alt_text": "abstract landscape"
+  },
+      {
+    "filename": "brewers-blackbird.png",
+    "year": 2023,
+    "title": "Brewer's Blackbird - SOLD",
+    "media": "Oil pastel on paper mounted on wood block",
+    "dimensions": "11 in x 14 in",
+    "alt_text": "abstract landscape"
+  },
+      {
+    "filename": "green-cliff-annas-hummingbird.jpg",
+    "year": 2023,
+    "title": "Green cliff (Anna's hummingbird)",
+    "media": "Oil pastel on paper",
+    "dimensions": "8 in x 10 in",
+    "alt_text": "abstract landscape"
+  },
+      {
+    "filename": "bobolink.jpg",
+    "year": 2023,
+    "title": "Bobolink",
+    "media": "Ink on paper",
+    "dimensions": "11 in x 17 in",
+    "alt_text": "abstract landscape"
+  },
+      {
+    "filename": "map-key-study.jpg",
+    "year": 2023,
+    "title": "Map key study",
+    "media": "Ink on paper",
+    "dimensions": "11 in x 14 in",
+    "alt_text": "abstract landscape"
+  },
+      {
+    "filename": "untitled-purple.jpg",
+    "year": 2023,
+    "title": "Untitled (purple)",
+    "media": "Oil pastel on paper",
+    "dimensions": "11 in x 14 in",
+    "alt_text": "abstract landscape"
+  },
+      {
+    "filename": "annas-hummingbird.jpg",
+    "year": 2023,
+    "title": "Anna's Hummingbird",
+    "media": "Oil pastel on paper",
+    "dimensions": "11 in x 14 in",
+    "alt_text": "abstract landscape"
+  },
+      {
+    "filename": "red-masked-parakeet.png",
+    "year": 2023,
+    "title": "Red-masked Parakeet",
+    "media": "Oil pastel on paper",
+    "dimensions": "11 in x 14 in",
+    "alt_text": "abstract landscape"
+  },
+      {
+    "filename": "western-bluebird.jpg",
+    "year": 2023,
+    "title": "Western Bluebird",
+    "media": "Oil pastel on paper",
+    "dimensions": "11 in x 14 in",
+    "alt_text": "abstract landscape"
+  },
+      {
+    "filename": "american-goldfinch-morning",
+    "year": 2024,
+    "title": "American Goldfinch (Morning)",
+    "media": "Oin on canvas",
+    "dimensions": "14 in x 16 in",
+    "alt_text": "abstract landscape"
+  },
+      {
+    "filename": "american-goldfinch-midday.png",
+    "year": 2024,
+    "title": "American Goldfinch (Midday) - SOLD",
+    "media": "Oil on canvas",
+    "dimensions": "11 in x 12 in",
+    "alt_text": "abstract landscape"
+  },
+      {
+    "filename": "american-goldfinch-sunset.jpeg",
+    "year": 2024,
+    "title": "American Goldfinch (Sunset)",
+    "media": "Oil on canvas",
+    "dimensions": "14 in x 16 in",
+    "alt_text": "abstract landscape"
+  },
+      {
+    "filename": "american-tree-sparrow.jpg",
+    "year": 2024,
+    "title": "American Tree Sparrow - SOLD",
+    "media": "Acrylic on canvas",
+    "dimensions": "14 in x 15 in",
+    "alt_text": "abstract landscape"
+  },
+      {
+    "filename": "blue-hour-mauve-sun.jpg",
+    "year": 2024,
+    "title": "Blue Hour (mauve sun) - SOLD",
+    "media": "Acrylic on canvas",
+    "dimensions": "16 in x 20 in",
+    "alt_text": "abstract landscape"
+  },
+      {
+    "filename": "blue-hour.jpg",
+    "year": 2024,
+    "title": "Blue Hour",
+    "media": "acrylic and oil pastel on board",
+    "dimensions": "8 in x 10 in",
+    "alt_text": "abstract pattern"
+  },
+      {
+    "filename": "blue-wave-pygmy-nuthatch.jpg",
+    "year": 2024,
+    "title": "Blue Wave (Pygmy Nuthatch) - SOLD",
+    "media": "Acrylic and pastel on reclaimed wood",
+    "dimensions": "30 in x 60 in",
+    "alt_text": "abstract landscape"
+  },
+      {
+    "filename": "cinnamon-teal.jpg",
+    "year": 2024,
+    "title": "Cinnamon Teal",
+    "media": "Acrylic on canvas",
+    "dimensions": "16 in x 20 in",
+    "alt_text": "abstract landscape"
+  },
+      {
+    "filename": "finch.jpg",
+    "year": 2024,
+    "title": "Finch",
+    "media": "Acrylic on wood block",
+    "dimensions": "10 in x 10.5 in",
+    "alt_text": "abstract landscape"
+  },
+      {
+    "filename": "golden-crowned-kinglet.jpg",
+    "year": 2024,
+    "title": "Golden-Crowned Kinglet",
+    "media": "Acrylic on wood block",
+    "dimensions": "5 in x 7.5 in",
+    "alt_text": "abstract pattern"
+  },
+      {
+    "filename": "pelican.jpg",
+    "year": 2024,
+    "title": "Pelican",
+    "media": "Acrylic on canvas",
+    "dimensions": "32 in x 42 in",
+    "alt_text": "abstract color theory"
+  },
+      {
+    "filename": "red-winged-blackbird.jpg",
+    "year": 2024,
+    "title": "Red-winged Blackbird",
+    "media": "Acrylic on canvas",
+    "dimensions": "16 in x 20 in",
+    "alt_text": "abstract structure"
+  },
+      {
+    "filename": "pygmy-nuthatch.jpg",
+    "year": 2024,
+    "title": "Pygmy Nuthatch",
+    "media": "Acrylic and oil pastel on wood block",
+    "dimensions": "12 in x 12 in",
+    "alt_text": "abstract landscape"
+  },
+      {
+    "filename": "song-sparrow.jpeg",
+    "year": 2024,
+    "title": "Song Sparrow",
+    "media": "Oil on canvas",
+    "dimensions": "12 in x 9 in",
+    "alt_text": "abstract structure"
+  },
+      {
+    "filename": "western-tanager-i.jpg",
+    "year": 2024,
+    "title": "Western Tanager I",
+    "media": "Oil pastel on paper",
+    "dimensions": "12 in x 12 in",
+    "alt_text": "abstract landscape"
+  },
+      {
+    "filename": "western-tanager-ii.jpg",
+    "year": 2024,
+    "title": "Western Tanager II",
+    "media": "Oil pastel on paper",
+    "dimensions": "12 in x 12 in",
+    "alt_text": "abstract landscape"
+  },
+      {
+    "filename": "western-tanager-iii.jpg",
+    "year": 2024,
+    "title": "Western Tanager III",
+    "media": "Oil pastel on paper",
+    "dimensions": "12 in x 12 in",
+    "alt_text": "abstract landscape"
+  },
+      {
+    "filename": "american-goldfinch.jpg",
+    "year": 2025,
+    "title": "American Goldfinch",
+    "media": "Acrylic on canvas",
+    "dimensions": "12 in x 12 in",
+    "alt_text": "abstract structural"
+  },
+      {
+    "filename": "blackbird-ii.jpg",
+    "year": 2025,
+    "title": "Blackbird II - SOLD",
+    "media": "Oil on canvas",
+    "dimensions": "16 in x 20 in",
+    "alt_text": "abstract structural"
+  },
+        {
+    "filename": "coopers-hawk.jpg",
+    "year": 2025,
+    "title": "Cooper's hawk",
+    "media": "Oil on canvas",
+    "dimensions": "18 in x 20 in",
+    "alt_text": "abstract landscape"
+  },
+        {
+    "filename": "green-sunset.jpg",
+    "year": 2025,
+    "title": "Green Sunset",
+    "media": "Oil on canvas",
+    "dimensions": "20 in x 18 in",
+    "alt_text": "abstract landscape"
+  },
+        {
+    "filename": "embrace.jpg",
+    "year": 2025,
+    "title": "Embrace",
+    "media": "acrylic on canvas",
+    "dimensions": "24 in x 24 in",
+    "alt_text": "abstract landscape"
+  },
+        {
+    "filename": "golden-hour.jpg",
+    "year": 2025,
+    "title": "Golden Hour - SOLD",
+    "media": "Acrylic and oil pastel on reclaimed wood",
+    "dimensions": "30 in x 60 in",
+    "alt_text": "abstract landscape"
+  },
+        {
+    "filename": "pacific-wren.jpg",
+    "year": 2025,
+    "title": "Pacific Wren - SOLD",
+    "media": "Oil on linen",
+    "dimensions": "12 in x 12 in",
+    "alt_text": "abstract landscape"
+  },
+        {
+    "filename": "pelican-green.jpg",
+    "year": 2025,
+    "title": "Pelican (green)",
+    "media": "Oil on canvas",
+    "dimensions": "30 in x 40 in",
+    "alt_text": "abstract structural"
+  },
+        {
+    "filename": "zee.jpg",
+    "year": 2025,
+    "title": "Zee",
+    "media": "Oil on canvas",
+    "dimensions": "12 in x 14 in",
+    "alt_text": "abstract cityscape"
   }
 ]
 
