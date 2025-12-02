@@ -44,33 +44,45 @@
 
 .lightbox-content {
   display: flex;
+  background: #fff;       /* unified white container */
+  padding: 0;
   max-width: 90%;
   max-height: 90%;
+  box-sizing: border-box;
 }
 
 .lightbox-content img {
-  max-width: 80%;
+  max-width: 60%;        /* image on left */
   max-height: 100%;
   object-fit: contain;
-  margin-right: 20px;
+  margin: 0;             /* remove extra margin */
 }
 
 .lightbox-sidebar {
-  width: 20%;
-  background: #F6F5F0;
+  width: 40%;            /* text info on right */
+  background: #fff;      /* same white as container */
   padding: 20px;
   box-sizing: border-box;
+  position: relative;    /* so we can place 'X' inside */
 }
+
+.lightbox-sidebar h2 {
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 2rem; /* ~32px, adjust as needed */
+  margin-top: 0;
+  word-wrap: break-word; /* prevent overflow */
+}
+
 
 #lightbox-close {
   position: absolute;
   top: 10px;
   right: 10px;
-  cursor: pointer;
   background: none;
   border: none;
   font-size: 24px;
-  color: black;
+  color: black;          /* more visible against white */
+  cursor: pointer;
 }
   
 </style>
