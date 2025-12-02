@@ -4,11 +4,17 @@ const lightboxImg = document.getElementById('lightbox-image');
 const lightboxDetails = document.getElementById('lightbox-details');
 const lightboxClose = document.getElementById('lightbox-close');
 const yearFilter = document.getElementById('year-filter');
+const allWorksBtn = document.getElementById('all-works-btn');
+
+let worksData = [];
 
 fetch('data/works.json')
-  .then(response => response.json())
+  .then(res => res.json())
   .then(data => {
-    const years = [...new Set(data.map(item => item.year))].sort((a, b) => b - a);
+    worksData = data;
+
+    // populate year dropdown
+    const years = [...new Set(data.map(item => item.year))].sort((a,b)=>b-a);
     years.forEach(year => {
       const option = document.createElement('option');
       option.value = year;
@@ -16,37 +22,40 @@ fetch('data/works.json')
       yearFilter.appendChild(option);
     });
 
-    renderGallery(data, years[0]);
-
-    yearFilter.addEventListener('change', () => {
-      renderGallery(data, yearFilter.value);
-    });
-
-    document.getElementById('all-works-btn').addEventListener('click', () => {
-      renderGallery(data);
-    });
-
-    function renderGallery(items, year) {
-      gallery.innerHTML = '';
-      items.filter(item => !year || item.year == year)
-        .forEach(item => {
-          const img = document.createElement('img');
-          img.src = `assets/images/${item.filename}`;
-          img.alt = item.alt_text || '';
-          img.addEventListener('click', () => {
-            lightboxImg.src = `assets/images/${item.filename}`;
-            lightboxDetails.innerHTML = `
-              <p><strong>${item.title}</strong></p>
-              <p>${item.media}</p>
-              <p>${item.dimensions}</p>
-            `;
-            lightbox.classList.remove('hidden');
-          });
-          gallery.appendChild(img);
-        });
-    }
+    // default: most recent year
+    renderGallery(worksData, years[0]);
   });
 
-lightboxClose.addEventListener('click', () => {
-  lightbox.classList.add('hidden');
+yearFilter.addEventListener('change', () => {
+  renderGallery(worksData, yearFilter.value);
 });
+
+allWorksBtn.addEventListener('click', () => {
+  renderGallery(worksData);
+});
+
+function renderGallery(items, year=null){
+  gallery.innerHTML = '';
+  items
+    .filter(item => !year || item.year == year)
+    .forEach(item => {
+      const img = document.createElement('img');
+      img.src = `assets/images/${item.filename}`;
+      img.alt = item.alt_text || '';
+      img.addEventListener('click', () => {
+        lightboxImg.src = `assets/images/${item.filename}`;
+        lightboxDetails.innerHTML = `
+          <h2>${item.title}</h2>
+          <p>${item.media}</p>
+          <p>${item.dimensions}</p>
+        `;
+        lightbox.style.display = 'flex';
+      });
+      gallery.appendChild(img);
+    });
+}
+
+lightboxClose.addEventListener('click', () => {
+  lightbox.style.display = 'none';
+});
+
