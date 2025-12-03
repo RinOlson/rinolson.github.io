@@ -11,6 +11,28 @@
     font-family: Arial, sans-serif !important;
     font-size: 100px;
   }
+.about-container {
+  display: flex;
+  flex-wrap: wrap;        /* allows stacking on small screens */
+  gap: 20px;              /* space between portrait and bio */
+  max-width: 1200px;      /* optional: match grid width */
+  margin: 0 auto;         /* center content */
+}
+
+.about-portrait {
+  flex: 1 1 300px;        /* min width 300px, grow to fill space */
+  max-width: 400px;       /* optional: prevent it from getting too big */
+  height: auto;
+  object-fit: cover;
+}
+
+.about-bio {
+  flex: 2 1 400px;        /* larger column for text */
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+}
+  
 </style>
     <meta charset="UTF-8">
     <title>About</title>
@@ -22,13 +44,15 @@
         <a href="index.html">PORTFOLIO</a>
     </header>
 
-    <main class="about-container">
-        <img src="assets/images/portrait.jpg" alt="Artist portrait" class="about-image">
-        <div class="about-text">
-            <h1><b>ABOUT</b></h1>
-            <p>Rin Olson is a San Francisco–based visual artist. Drawing inspiration from her musical background and the natural world, Rin’s work explores the interplay of color theory, rhythm, improvisation, and harmonic tension and resolution. By transforming the auditory world into the visual, she creates abstract landscapes and structures that evoke the often overlooked dimensions of nature. Since 2021, her focus has been on transcribing birdsongs.<br><br>
+  <main class="about-page">
+  <div class="about-container">
+    <img src="assets/images/portrait.jpg" alt="Rin Olson Portrait" class="about-portrait">
+    <div class="about-bio">
+       <p>Rin Olson is a San Francisco–based visual artist. Drawing inspiration from her musical background and the natural world, Rin’s work explores the interplay of color theory, rhythm, improvisation, and harmonic tension and resolution. By transforming the auditory world into the visual, she creates abstract landscapes and structures that evoke the often overlooked dimensions of nature. Since 2021, her focus has been on transcribing birdsongs.<br><br>
             Much like a piece of music follows a particular key and time signature, each composition contains an elemental structure tying color and form together. This gives each piece an apparent, though ambiguous, logic that invites viewers to reflect on connectivity, perception, and the ephemeral qualities of color and sound. Influences include Etel Adnan, Richard Diebenkorn, Mark Rothko, Helen Frankenthaler, and Josef Albers.</p>
-        </div>
-    </main>
+    </div>
+  </div>
+</main>
+  
 </body>
 </html>
