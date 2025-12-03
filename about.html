@@ -11,6 +11,40 @@
     font-family: Arial, sans-serif !important;
     font-size: 100px;
 }
+
+/* left-side link styling */
+.site-header > div a {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+/* nav links on right */
+.site-header nav {
+  display: flex;
+  gap: 20px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  align-items: center;
+}
+
+/* individual nav links */
+.site-header nav a {
+  text-decoration: none;
+  color: black;
+}
+
+/* underline the current page */
+.site-header nav a.current-page {
+  text-decoration: underline;
+}
+
+/* hover effect */
+.site-header nav a:hover {
+  text-decoration: underline;
+}  
+  
 .about-container {
   display: flex;
   flex-wrap: wrap;        /* allows stacking on small screens */
@@ -40,10 +74,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="site-header">
-        <a href="index.html">PORTFOLIO</a>
-    </header>
 
+  <header class="site-header">
+  <div>
+    <a href="index.html" class="back-to-portfolio"><b>PORTFOLIO</b></a>
+  </div>
+  <nav>
+    <a href="about.html" class="current-page"><b>ABOUT</b></a>
+    <a href="inquire.html"><b>INQUIRE</b></a>
+  </nav>
+</header>
+
+
+  
   <main class="about-page">
   <div class="about-container">
     <img src="assets/images/portrait.jpg" alt="Rin Olson Portrait" class="about-portrait">
