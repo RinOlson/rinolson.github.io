@@ -1,37 +1,21 @@
 [
-  {
-    "filename": "american-goldfinch.png",
-    "year": 2022,
-    "title": "American Goldfinch",
-    "media": "Oil on canvas",
-    "dimensions": "15 in x 14 in",
-    "alt_text": "abstract blue landscape"
-  },
-  {
-    "filename": "orange-headed-thrush.png",
+    {
+    "filename": "orange-headed-thrush.jpg",
     "year": 2022,
     "title": "Orange-headed Thrush",
     "media": "Oil on canvas",
     "dimensions": "12 in x 13 in",
     "alt_text": "abstract pink cityscape"
   },
-  {
-    "filename": "transcription-of-a-bassian-thrush.jpg",
-    "year": 2022,
-    "title": "Transcription of a Bassian Thrush",
-    "media": "Oil on canvas",
-    "dimensions": "12 in x 13 in",
-    "alt_text": "abstract still life with bottle"
-  },
-  {
-    "filename": "transcription-of-an-indian-pitta.png",
+    {
+    "filename": "transcription-of-an-indian-pitta.jpg",
     "year": 2022,
     "title": "Transcription of an Indian Pitta",
     "media": "Oil on canvas stretched in found mirror frame",
     "dimensions": "22 in x 29 in",
     "alt_text": "abstract red sky, blue mountain"
   },
-  {
+    {
     "filename": "also-a-lapland-longspur.jpg",
     "year": 2022,
     "title": "Also a Lapland Longspur",
@@ -39,13 +23,21 @@
     "dimensions": "13 in x 12 in",
     "alt_text": "abstract landscape"
   },
-  {
+    {
     "filename": "also-a-european-starling.jpg",
     "year": 2022,
     "title": "Also a European Starling",
     "media": "Oil and thread on canvas",
     "dimensions": "13 in x 12 in",
     "alt_text": "abstract landscape"
+  },
+    {
+    "filename": "american-goldfinch.jpg",
+    "year": 2022,
+    "title": "American Goldfinch",
+    "media": "Oil on canvas",
+    "dimensions": "15 in x 14 in",
+    "alt_text": "abstract blue landscape"
   },
     {
     "filename": "transcription-of-a-cackling-goose.jpg",
@@ -79,6 +71,22 @@
     "dimensions": "12 in x 14 in",
     "alt_text": "abstract still life"
   },
+      {
+    "filename": "morelets-seedeater.jpg",
+    "year": 2022,
+    "title": "Morelet's Seedeater",
+    "media": "Oil on unstretched canvas",
+    "dimensions": "13 in x 16 in",
+    "alt_text": "abstract still life"
+  },
+    {
+    "filename": "transcription-of-a-bassian-thrush.jpg",
+    "year": 2022,
+    "title": "Transcription of a Bassian Thrush",
+    "media": "Oil on canvas",
+    "dimensions": "12 in x 13 in",
+    "alt_text": "abstract still life with bottle"
+  },
     {
     "filename": "lapland-longspur.jpg",
     "year": 2022,
@@ -88,15 +96,7 @@
     "alt_text": "abstract landscape"
   },
     {
-    "filename": "morelets-seedeater",
-    "year": 2022,
-    "title": "Morelet's Seedeater",
-    "media": "Oil on unstretched canvas",
-    "dimensions": "13 in x 16 in",
-    "alt_text": "abstract still life"
-  },
-    {
-    "filename": "violet-green-swallow.png",
+    "filename": "violet-green-swallow.jpg",
     "year": 2023,
     "title": "Violet-green Swallow",
     "media": "Oil on canvas",
@@ -104,7 +104,7 @@
     "alt_text": "abstract landscape"
   },
     {
-    "filename": "american-tree-sparrow.png",
+    "filename": "american-tree-sparrow.jpg",
     "year": 2023,
     "title": "American Tree Sparrow",
     "media": "Oil on canvas",
@@ -112,7 +112,7 @@
     "alt_text": "abstract landscape"
   },
       {
-    "filename": "brewers-blackbird.png",
+    "filename": "brewers-blackbird.jpg",
     "year": 2023,
     "title": "Brewer's Blackbird - SOLD",
     "media": "Oil pastel on paper mounted on wood block",
