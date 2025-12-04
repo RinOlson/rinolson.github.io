@@ -53,29 +53,30 @@
 /* LIGHTBOX CONTENT */
 .lightbox-content {
   display: flex;
-  background: #fff;       /* unified white container */
+  background: #fff;
   padding: 0;
   max-width: 90%;
-  max-height: 90%;
+  max-height: 90vh;   /* constrain by viewport height */
   box-sizing: border-box;
-  gap: 0;                 /* no extra space between image and sidebar */
+  gap: 0;
+  align-items: flex-start;  /* top-align sidebar with image */
 }
 
 /* IMAGE WRAPPER */
 .lightbox-image-wrapper {
-  flex: 0 0 auto;          /* keeps image column width fixed */
-  max-width: 60%;          /* image takes up to 60% of container */
+  flex: 0 0 auto;          /* fixed image column */
+  max-width: 60vw;          /* limit width relative to viewport */
   display: flex;
-  flex-direction: column;  /* allows top alignment */
+  flex-direction: column;
   justify-content: flex-start;
 }
 
 /* IMAGE */
 .lightbox-image-wrapper img {
-  width: 100%;             /* fill wrapper width */
-  height: auto;            /* maintain aspect ratio */
-  max-height: 100%;        /* never exceed wrapper height */
-  object-fit: contain;     /* zoom-to-fit without cropping */
+  width: auto;           /* natural width */
+  height: 100%;          /* fill wrapper height */
+  max-height: 90vh;      /* never exceed 90% of viewport */
+  object-fit: contain;   /* zoom-to-fit without cropping */
   margin: 0;
 }
 
@@ -85,16 +86,16 @@
   background: #fff;
   padding: 20px;
   box-sizing: border-box;
-  position: relative;      /* anchors #lightbox-close */
   display: flex;
   flex-direction: column;
   justify-content: flex-start; /* top align all content */
+  position: relative;           /* anchors #lightbox-close */
 }
 
 /* TITLE */
 .lightbox-sidebar h2 {
   font-family: Arial, sans-serif;
-  font-size: 2rem; /* ~32px, adjust if needed */
+  font-size: 2rem; /* ~32px, adjust as needed */
   margin-top: 0;
   word-wrap: break-word; /* prevent overflow */
 }
@@ -195,7 +196,7 @@
   </div>
 </main>
 
-    <div id="lightbox" class="lightbox hidden">
+<div id="lightbox" class="lightbox hidden">
     <div class="lightbox-content">
         <div class="lightbox-image-wrapper">
             <img id="lightbox-image" src="" alt="">
