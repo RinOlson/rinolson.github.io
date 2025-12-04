@@ -55,10 +55,23 @@ function renderGallery(items, year=null){
     });
 }
 
+// grab elements
+const lightbox = document.getElementById('lightbox');
+const lightboxClose = document.getElementById('lightbox-close');
+
+// function to close lightbox
+function closeLightbox() {
+  lightbox.classList.add('hidden');
+}
+
+// close via X button
+lightboxClose.addEventListener('click', closeLightbox);
+
+// close by clicking outside content
 lightbox.addEventListener('click', (e) => {
-  // only close if the click is on the overlay itself, not inside the content
-  if (e.target === lightbox) {
-    lightbox.classList.add('hidden');
+  if (e.target === lightbox) {   // only clicks directly on overlay
+    closeLightbox();
   }
 });
+
 
