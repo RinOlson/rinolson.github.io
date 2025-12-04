@@ -55,10 +55,6 @@ function renderGallery(items, year=null){
     });
 }
 
-// grab elements
-const lightbox = document.getElementById('lightbox');
-const lightboxClose = document.getElementById('lightbox-close');
-
 // function to close lightbox
 function closeLightbox() {
   lightbox.classList.add('hidden');
@@ -73,5 +69,6 @@ lightbox.addEventListener('click', (e) => {
     closeLightbox();
   }
 });
+
 
 
