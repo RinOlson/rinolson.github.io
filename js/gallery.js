@@ -57,7 +57,7 @@ function renderGallery(items, year=null){
 
 // function to close lightbox
 function closeLightbox() {
-  lightbox.classList.add('hidden');
+  lightbox.style.display = 'none';
 }
 
 // close via X button
