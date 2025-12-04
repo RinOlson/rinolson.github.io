@@ -55,7 +55,10 @@ function renderGallery(items, year=null){
     });
 }
 
-lightboxClose.addEventListener('click', () => {
-  lightbox.style.display = 'none';
+lightbox.addEventListener('click', (e) => {
+  // only close if the click is on the overlay itself, not inside the content
+  if (e.target === lightbox) {
+    lightbox.classList.add('hidden');
+  }
 });
 
