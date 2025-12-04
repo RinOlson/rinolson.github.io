@@ -61,30 +61,36 @@
   max-height: 90%;
   box-sizing: border-box;
   gap: 0;                 /* no extra space between image and sidebar */
-  align-items: flex-start;
+}
+
+/* IMAGE WRAPPER */
+.lightbox-image-wrapper {
+  flex: 0 0 auto;          /* keeps image column width fixed */
+  max-width: 60%;          /* image takes up to 60% of container */
+  display: flex;
+  flex-direction: column;  /* allows top alignment */
+  justify-content: flex-start;
 }
 
 /* IMAGE */
-.lightbox-content img {
-  flex: 0 0 auto;          /* natural width up to max-width */
-  max-width: 60%;          /* image takes up to 60% of container width */
-  height: auto;            /* preserve aspect ratio */
-  max-height: 100%;        /* <-- key: image will not exceed container height */
-  object-fit: contain;     
+.lightbox-image-wrapper img {
+  width: 100%;             /* fill wrapper width */
+  height: auto;            /* maintain aspect ratio */
+  max-height: 100%;        /* never exceed wrapper height */
+  object-fit: contain;     /* zoom-to-fit without cropping */
   margin: 0;
 }
 
-
 /* SIDEBAR */
 .lightbox-sidebar {
-  flex: 1 1 auto;        /* sidebar fills remaining space next to image */
+  flex: 1 1 auto;          /* sidebar fills remaining space */
   background: #fff;
-  padding: 0px 20px 20px 20px;
+  padding: 20px;
   box-sizing: border-box;
-  position: relative;    /* anchors #lightbox-close */
+  position: relative;      /* anchors #lightbox-close */
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: flex-start; /* top align all content */
 }
 
 /* TITLE */
@@ -192,14 +198,16 @@
 </main>
 
     <div id="lightbox" class="lightbox hidden">
-        <div class="lightbox-content">
+    <div class="lightbox-content">
+        <div class="lightbox-image-wrapper">
             <img id="lightbox-image" src="" alt="">
-            <div class="lightbox-sidebar">
-                <button id="lightbox-close">X</button>
-                <div id="lightbox-details"></div>
-            </div>
+        </div>
+        <div class="lightbox-sidebar">
+            <button id="lightbox-close">X</button>
+            <div id="lightbox-details"></div>
         </div>
     </div>
+</div>
 
     <script src="js/gallery.js"></script>
 </body>
