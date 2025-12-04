@@ -10,15 +10,92 @@
     font-size: 14px;
   }
   h1, h2, h3 {
-    font-family: 'Archivo Black', sans-serif !important;
+    font-family: Arial, sans-serif !important;
     font-size: 100px;
-  }
+} 
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 40px;   /* spacing from edges + pushes portrait down */
+}  
+
+/* left-side link styling */
+.site-header > div a {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+/* nav links on right */
+.site-header nav {
+  display: flex;
+  gap: 20px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  align-items: center;
+}
+
+/* individual nav links */
+.site-header nav a {
+  text-decoration: none;
+  color: black;
+}
+
+/* underline the current page */
+.site-header nav a.current-page {
+  text-decoration: underline;
+}
+
+/* hover effect */
+.site-header nav a:hover {
+  text-decoration: underline;
+}  
+  
+.about-container {
+  display: flex;
+  flex-wrap: wrap;        /* allows stacking on small screens */
+  gap: 20px;              /* space between portrait and bio */
+  max-width: 1200px;      /* optional: match grid width */
+  margin: 0 auto;         /* center content */
+}
+
+.about-portrait {
+  flex: 1 1 300px;        /* min width 300px, grow to fill space */
+  max-width: 400px;       /* optional: prevent it from getting too big */
+  height: auto;
+  object-fit: cover;
+}
+
+.about-bio {
+  flex: 2 1 400px;        /* larger column for text */
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+}
+  
 </style>
+    <meta charset="UTF-8">
+    <title><b>ABOUT</b></title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header class="site-header">
+  <div>
+    <a href="index.html" class="back-to-portfolio"><b>PORTFOLIO</b></a>
+  </div>
+  <nav>
+    <a href="about.html" class="current-page"><b>ABOUT</b></a>
+    <a href="inquire.html"><b>INQUIRE</b></a>
+  </nav>
+</header>
     
     <meta charset="UTF-8">
     <title>Inquire – Rin Olson</title>
     <link rel="stylesheet" href="css/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="site-header">
@@ -26,7 +103,7 @@
     </header>
 
     <main class="inquire-container">
-        <h1>Inquire</h1>
+        <h1>INQUIRE</h1>
         <p>Please direct sales inquiries to Hang Art in San Francisco:<br>
         <a href="mailto:info@hangart.com">info@hangart.com</a></p>
     </main>
