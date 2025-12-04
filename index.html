@@ -66,12 +66,14 @@
 
 /* IMAGE */
 .lightbox-content img {
-  flex: 0 0 auto;        /* keep natural width up to max-width */
-  max-width: 60%;        /* image takes up to 60% of container */
-  max-height: 100%;
-  object-fit: contain;
+  flex: 0 0 auto;          /* natural width up to max-width */
+  max-width: 60%;          /* image takes up to 60% of container width */
+  height: auto;            /* preserve aspect ratio */
+  max-height: 100%;        /* <-- key: image will not exceed container height */
+  object-fit: contain;     
   margin: 0;
 }
+
 
 /* SIDEBAR */
 .lightbox-sidebar {
