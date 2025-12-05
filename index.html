@@ -62,6 +62,14 @@
   align-items: flex-start;  /* top-align sidebar with image */
 }
 
+.lightbox-content img {
+  object-fit: cover;
+}
+
+.lightbox-content img.tall-image {
+  object-fit: contain;
+}  
+  
 /* IMAGE WRAPPER */
 .lightbox-image-wrapper {
   flex: 0 0 auto;          /* fixed image column */
