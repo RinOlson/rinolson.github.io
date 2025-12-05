@@ -93,14 +93,16 @@
 
 /* SIDEBAR */  
 .lightbox-sidebar {
-  flex: 1 1 auto;
+  width: 40%;            /* fixed width relative to container */
+  max-width: 400px;      /* optional: prevent it from getting too wide */
+  min-width: 250px;      /* optional: prevent it from being too narrow */
   background: #fff;
-  padding: 40px 20px 20px 20px; /* top padding 40px to clear the X */
+  padding: 40px 20px 20px 20px; /* top padding to clear the X */
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  position: relative;  /* anchors #lightbox-close */
+  position: relative;    /* anchors #lightbox-close */
 }
 
 /* TITLE */
