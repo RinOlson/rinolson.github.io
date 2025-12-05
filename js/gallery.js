@@ -44,16 +44,6 @@ function renderGallery(items, year=null){
       img.alt = item.alt_text || '';
       img.addEventListener('click', () => {
     lightboxImg.src = `assets/images/${item.filename}`;
-
-    // Wait until the image is fully loaded
-    lightboxImg.onload = () => {
-        if (lightboxImg.naturalHeight > lightboxImg.naturalWidth) {
-            lightboxImg.classList.add("tall-image");
-        } else {
-            lightboxImg.classList.remove("tall-image");
-        }
-    };
-
     lightboxDetails.innerHTML = `
         <h2>${item.title}</h2>
         <p>${item.media}</p>
