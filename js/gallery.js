@@ -43,21 +43,25 @@ function renderGallery(items, year=null){
       img.src = `assets/images/${item.filename}`;
       img.alt = item.alt_text || '';
       img.addEventListener('click', () => {
-        lightboxImg.src = `assets/images/${item.filename}`;
+    lightboxImg.src = `assets/images/${item.filename}`;
 
-if (lightboxImg.naturalHeight > lightboxImg.naturalWidth) {
-  lightboxImg.classList.add("tall-image");
-} else {
-  lightboxImg.classList.remove("tall-image");
-}
-        
-        lightboxDetails.innerHTML = `
-          <h2>${item.title}</h2>
-          <p>${item.media}</p>
-          <p>${item.dimensions}</p>
-        `;
-        lightbox.style.display = 'flex';
-      });
+    // Wait until the image is fully loaded
+    lightboxImg.onload = () => {
+        if (lightboxImg.naturalHeight > lightboxImg.naturalWidth) {
+            lightboxImg.classList.add("tall-image");
+        } else {
+            lightboxImg.classList.remove("tall-image");
+        }
+    };
+
+    lightboxDetails.innerHTML = `
+        <h2>${item.title}</h2>
+        <p>${item.media}</p>
+        <p>${item.dimensions}</p>
+    `;
+    lightbox.style.display = 'flex';
+});
+
       gallery.appendChild(img);
     });
 }
