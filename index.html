@@ -184,14 +184,15 @@ h1, h2, h3 {
   .lightbox-content {
     flex-direction: column;
     width: 95%;
-    height: 95vh;        /* FILL 95% of viewport height */
-    background: #fff;    /* fallback background */
+    height: 95vh;
+    background: #fff;
+    position: relative;  /* ADD THIS - makes it the positioning context */
   }
 
   /* Image wrapper at the top, limited height */
   .lightbox-image-wrapper {
     width: 100%;
-    max-height: 60%;     /* image gets ~60% of container height */
+    max-height: 60%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -206,17 +207,16 @@ h1, h2, h3 {
   /* Sidebar fills remaining vertical space */
   .lightbox-sidebar {
     width: 100%;
-    flex-grow: 1;         /* fills the rest of .lightbox-content */
+    flex-grow: 1;
     padding: 40px 20px 20px 20px;
     box-sizing: border-box;
-    position: relative;
-    background: #fff;     /* ensures full-width white */
+    background: #fff;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
   }
 
-  /* Close button stays in top-right */
+  /* Close button now positioned relative to .lightbox-content */
   #lightbox-close {
     position: absolute;
     top: 10px;
@@ -224,9 +224,10 @@ h1, h2, h3 {
     z-index: 10;
     color: black;
     font-size: 24px;
-    background: none;
+    background: white;  /* ADD THIS - gives it a white background */
     border: none;
     cursor: pointer;
+    padding: 5px 10px;  /* ADD THIS - makes the white background visible */
   }
 }
   
