@@ -179,15 +179,22 @@ h1, h2, h3 {
 }
 
 @media (max-width: 700px) {
+
+  /* Stack image and sidebar vertically */
   .lightbox-content {
     flex-direction: column;
     max-width: 95%;
     max-height: 95vh;
+    background: #fff; /* fallback in case sidebar height fails */
   }
 
+  /* Image takes full width, limited height */
   .lightbox-image-wrapper {
     width: 100%;
-    max-height: 60vh;   /* limit image height */
+    max-height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .lightbox-image-wrapper img {
@@ -196,21 +203,27 @@ h1, h2, h3 {
     object-fit: contain;
   }
 
+  /* Sidebar fills remaining space under image */
   .lightbox-sidebar {
     width: 100%;
-    flex-grow: 1;        /* take remaining space */
+    flex-grow: 1;         /* ensures it expands to fill space */
     padding: 40px 20px 20px 20px;
     box-sizing: border-box;
     position: relative;
-    background: #fff;
+    background: #fff;     /* ensures full-width white background */
   }
 
+  /* Keep close button in top-right */
   #lightbox-close {
     position: absolute;
     top: 10px;
     right: 10px;
     z-index: 10;
     color: black;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
   }
 }
   
