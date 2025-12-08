@@ -180,41 +180,37 @@ h1, h2, h3 {
 
 @media (max-width: 700px) {
 
-  /* Stack image above sidebar */
   .lightbox-content {
     flex-direction: column;
     max-width: 95%;
     max-height: 95vh;
   }
 
-  /* Image takes natural width */
   .lightbox-image-wrapper {
-    max-width: 100%;
     width: 100%;
-    height: auto;
+    max-height: 60vh;   /* keep images from being too tall */
   }
 
   .lightbox-image-wrapper img {
     width: 100%;
     height: auto;
-    max-height: 60vh;
     object-fit: contain;
   }
 
-  /* Sidebar fills full width */
   .lightbox-sidebar {
-    width: 100%;
-    padding: 20px;
+    width: 100%;          /* fill the row */
+    padding: 40px 20px 20px 20px; 
     box-sizing: border-box;
+    position: relative;   /* keeps the X positioned relative to sidebar */
+    background: #fff;     /* ensure full-width white */
   }
 
-  /* X button stays on the full overlay, not sidebar */
   #lightbox-close {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 2000;
-    color: white;   /* looks better against dark overlay */
+    position: absolute;   /* stay inside sidebar */
+    top: 10px;
+    right: 10px;
+    z-index: 10;
+    color: white;  
   }
 }
 
