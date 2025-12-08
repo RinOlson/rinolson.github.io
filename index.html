@@ -180,18 +180,18 @@ h1, h2, h3 {
 
 @media (max-width: 700px) {
 
-  /* Stack image and sidebar vertically */
+  /* Stack vertically and fill most of viewport */
   .lightbox-content {
     flex-direction: column;
-    max-width: 95%;
-    max-height: 95vh;
-    background: #fff; /* fallback in case sidebar height fails */
+    width: 95%;
+    height: 95vh;        /* FILL 95% of viewport height */
+    background: #fff;    /* fallback background */
   }
 
-  /* Image takes full width, limited height */
+  /* Image wrapper at the top, limited height */
   .lightbox-image-wrapper {
     width: 100%;
-    max-height: 60vh;
+    max-height: 60%;     /* image gets ~60% of container height */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -203,17 +203,20 @@ h1, h2, h3 {
     object-fit: contain;
   }
 
-  /* Sidebar fills remaining space under image */
+  /* Sidebar fills remaining vertical space */
   .lightbox-sidebar {
     width: 100%;
-    flex-grow: 1;         /* ensures it expands to fill space */
+    flex-grow: 1;         /* fills the rest of .lightbox-content */
     padding: 40px 20px 20px 20px;
     box-sizing: border-box;
     position: relative;
-    background: #fff;     /* ensures full-width white background */
+    background: #fff;     /* ensures full-width white */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
   }
 
-  /* Keep close button in top-right */
+  /* Close button stays in top-right */
   #lightbox-close {
     position: absolute;
     top: 10px;
