@@ -3,14 +3,14 @@
 <head>
 
 <style>
-  body {
-    font-family: Arial, sans-serif !important;
-    font-size: 14px;
-  }
-  h1, h2, h3 {
-    font-family: Arial, sans-serif !important;
-    font-size: 20px;
-  }
+body {
+  font-family: Arial, sans-serif !important;
+  font-size: 14px;
+}
+h1, h2, h3 {
+  font-family: Arial, sans-serif !important;
+  font-size: 20px;
+}
 .gallery-container {
   padding: 0 40px; /* match site-header horizontal padding */
 }
@@ -177,12 +177,49 @@
 .site-header nav a:hover {
   text-decoration: underline;
 }
-  
-@media (max-width: 600px) {
-  .site-header {
+
+@media (max-width: 700px) {
+
+  /* Stack image above sidebar */
+  .lightbox-content {
     flex-direction: column;
-    align-items: flex-start;
+    max-width: 95%;
+    max-height: 95vh;
   }
+
+  /* Image takes natural width */
+  .lightbox-image-wrapper {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+  }
+
+  .lightbox-image-wrapper img {
+    width: 100%;
+    height: auto;
+    max-height: 60vh;
+    object-fit: contain;
+  }
+
+  /* Sidebar fills full width */
+  .lightbox-sidebar {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  /* X button stays on the full overlay, not sidebar */
+  #lightbox-close {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 2000;
+    color: white;   /* looks better against dark overlay */
+  }
+}
+
+
+  
 }
   
 </style>
