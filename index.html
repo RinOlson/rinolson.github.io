@@ -263,36 +263,34 @@ h1, h2, h3 {
     margin-bottom: 40px; /* gives a bit of breathing room */
   }
 }
-/* Fake nav after main, only visible in portrait */
-@media (orientation: portrait) {
-  body {
-    position: relative;
-  }
+/* Hide mobile nav by default */
+.mobile-nav {
+  display: none;
+}
 
-  /* Hide original nav visually but keep it for landscape/desktop */
+/* PORTRAIT: hide header nav, show bottom nav */
+@media (orientation: portrait) {
   header.site-header nav {
     display: none;
   }
-
-  /* Create new nav at the bottom of the page */
-  body::after {
-    content: "ABOUT   |   INQUIRE";
+  .mobile-nav {
     display: block;
     width: 100%;
     text-align: center;
-    font-family: Arial, sans-serif;
-    font-size: 14px;
     margin-top: 24px;
     margin-bottom: 40px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
   }
 }
 
+/* LANDSCAPE: show header nav, hide bottom nav */
 @media (orientation: landscape) {
   header.site-header nav {
-    display: flex; /* restore normal */
+    display: flex;
   }
-  body::after {
-    display: none; /* hide fake mobile nav */
+  .mobile-nav {
+    display: none;
   }
 }
     
@@ -323,6 +321,11 @@ h1, h2, h3 {
       <div id="gallery" class="gallery-grid"></div>
   </div>
 </main>
+    
+<nav class="mobile-nav">
+  <a href="about.html"><b>ABOUT</b></a> |
+  <a href="inquire.html"><b>INQUIRE</b></a>
+</nav>
 
 <div id="lightbox" class="lightbox hidden">
     <div class="lightbox-content">
