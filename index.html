@@ -233,13 +233,54 @@ h1, h2, h3 {
   margin-bottom: 40px;
 }
 
-/* PORTRAIT: hide desktop nav, show mobile nav */
 @media (orientation: portrait) {
+
+  header.site-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* center everything horizontally */
+    gap: 16px;
+    width: 100%;
+  }
+
+  /* Title at the top, centered */
+  .site-title {
+    order: -1;
+    margin: 0;
+    text-align: center;
+  }
+
+  /* Filters (year selector + button) on same line, centered */
+  .site-header > div {
+    order: 0;
+    display: flex;           /* keep on same row */
+    flex-direction: row;     /* horizontal row */
+    align-items: center;     /* vertical alignment */
+    justify-content: center; /* center horizontally */
+    gap: 8px;                /* space between selector and button */
+    width: 100%;             /* optional, helps centering */
+  }
+
+  /* Main/gallery */
+  main {
+    order: 1;
+    width: 100%;
+    display: flex;
+    justify-content: center; /* center the gallery horizontally */
+  }
+
+  /* Mobile nav at the bottom */
+  .mobile-nav {
+    order: 2;
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 24px;
+    margin-bottom: 40px;
+  }
+
   .desktop-nav {
     display: none;
-  }
-  .mobile-nav {
-    display: block;
   }
 }
 
