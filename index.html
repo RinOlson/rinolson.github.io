@@ -181,34 +181,6 @@ h1, h2, h3 {
   text-decoration: underline;
 }
 
-/* Default desktop/landscape nav (unchanged) */
-header.site-header nav.site-nav {
-    display: flex;
-    justify-content: flex-end; /* your current desktop alignment */
-    gap: 20px;
-    font-weight: normal;
-}
-
-/* Desktop / landscape: nav on right */
-header.site-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 10px;
-    padding: 50px 42px;
-}
-
-header.site-header nav.site-nav {
-    display: flex;
-    gap: 20px;
-}
-
-/* Filters row on desktop */
-header.site-header .filters {
-    display: flex;
-    gap: 10px;
-}
 
 /* PORTRAIT: center everything, title top, filters same line, nav below gallery */
 @media (orientation: portrait) {
@@ -250,16 +222,6 @@ header.site-header .filters {
         margin-top: 24px;
         font-weight: bold;
     }
-}
-
-/* LANDSCAPE: show desktop nav, hide mobile nav */
-@media (orientation: landscape) {
-  .desktop-nav {
-    display: flex;
-  }
-  .mobile-nav {
-    display: none;
-  }
 }
 
 </style>
