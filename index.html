@@ -263,13 +263,36 @@ h1, h2, h3 {
     margin-bottom: 40px; /* gives a bit of breathing room */
   }
 }
+/* Fake nav after main, only visible in portrait */
+@media (orientation: portrait) {
+  body {
+    position: relative;
+  }
 
-/* LANDSCAPE — force desktop-style layout on phones/tablets */
+  /* Hide original nav visually but keep it for landscape/desktop */
+  header.site-header nav {
+    display: none;
+  }
+
+  /* Create new nav at the bottom of the page */
+  body::after {
+    content: "ABOUT   |   INQUIRE";
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    margin-top: 24px;
+    margin-bottom: 40px;
+  }
+}
+
 @media (orientation: landscape) {
-  .site-header {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+  header.site-header nav {
+    display: flex; /* restore normal */
+  }
+  body::after {
+    display: none; /* hide fake mobile nav */
   }
 }
     
