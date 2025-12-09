@@ -182,26 +182,26 @@ h1, h2, h3 {
 }
 
 @media (max-width: 600px) {
-  .lightbox .lightbox-content .lightbox-sidebar {
-    min-width: 0;
-    width: 100%;
-    max-width: none;
-  }
-    
+
+  /* One rule, same specificity but later = guaranteed override */
   .lightbox-sidebar {
-    width: 100%;
+    min-width: 0;
     max-width: none;
-    min-width: 0;        /* ← THIS TURNS OFF THE DESKTOP CONSTRAINT */
+    width: 100%;
     padding: 60px 20px 20px 20px;
-    background: #fff;
+  }
+
+  /* Image column takes full width on mobile as well */
+  .lightbox-image-wrapper {
+    max-width: 100%;
   }
 
   #lightbox-close {
     right: 10px;
     top: 10px;
-    color: black;
   }
 }
+
   
 </style>
     
