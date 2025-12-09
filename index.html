@@ -181,49 +181,35 @@ h1, h2, h3 {
   text-decoration: underline;
 }
 
+@media (max-width: 600px) {
 
-/* PORTRAIT: center everything, title top, filters same line, nav below gallery */
-@media (orientation: portrait) {
-    header.site-header {
-        flex-direction: column;
-        align-items: center;
-        gap: 16px;
-    }
+  .lightbox-content {
+    flex-direction: column;
+    max-height: none;      /* allow scrolling */
+    height: auto;
+  }
 
-    /* Title first */
-    .site-title {
-        order: -1;
-        text-align: center;
-        margin: 0;
-    }
+  .lightbox-image-wrapper {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+  }
 
-    /* Filters on same line, centered */
-    .filters {
-        order: 0;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        gap: 8px;
-        width: 100%;
-    }
+  .lightbox-image-wrapper img {
+    width: 100%;
+    height: auto;          /* stop the forced vertical expansion */
+    max-height: none;      /* allow natural proportions */
+  }
 
-    main {
-        order: 1;
-        display: flex;
-        justify-content: center;
-        width: 100%;
-    }
-
-    nav.site-nav {
-        order: 2;
-        justify-content: center;
-        width: 100%;
-        margin-top: 24px;
-        font-weight: bold;
-    }
+  .lightbox-sidebar {
+    min-width: 0;
+    max-width: none;
+    width: 100%;
+    padding: 60px 20px 20px 20px;
+  }
 }
 
+  
 </style>
     
     <meta charset="UTF-8">
@@ -231,24 +217,25 @@ h1, h2, h3 {
     <title>Rin Olson</title>
 </head>
 <body>
-<header class="site-header">
-    <h1 class="site-title">RIN OLSON</h1>
+    
+    <header class="site-header">
+        <div>
+            <select id="year-filter"></select>
+            <button id="all-works-btn"><b>ALL WORKS</b></button>
+        </div>
+      
+        <h1 class="site-title">RIN OLSON</h1>
 
-    <div class="filters">
-        <select id="year-filter"></select>
-        <button id="all-works-btn"><b>ALL WORKS</b></button>
-    </div>
-
-    <nav class="site-nav">
-        <a href="about.html"><b>ABOUT</b></a> |
-        <a href="inquire.html"><b>INQUIRE</b></a>
-    </nav>
-</header>
+        <nav>
+            <a href="about.html"><b>ABOUT</b></a> |
+            <a href="inquire.html"><b>INQUIRE</b></a>
+        </nav>
+    </header>
 
 <main>
-    <div class="gallery-container">
-        <div id="gallery" class="gallery-grid"></div>
-    </div>
+  <div class="gallery-container">
+      <div id="gallery" class="gallery-grid"></div>
+  </div>
 </main>
 
 <div id="lightbox" class="lightbox hidden">
@@ -263,7 +250,7 @@ h1, h2, h3 {
     </div>
 </div>
 
-<script src="js/gallery.js"></script>
-
+    <script src="js/gallery.js"></script>
 </body>
 </html>
+
