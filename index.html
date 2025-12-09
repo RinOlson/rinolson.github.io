@@ -183,17 +183,29 @@ h1, h2, h3 {
 
 @media (max-width: 600px) {
 
-  /* One rule, same specificity but later = guaranteed override */
+  .lightbox-content {
+    flex-direction: column;
+    max-height: none;      /* allow scrolling */
+    height: auto;
+  }
+
+  .lightbox-image-wrapper {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+  }
+
+  .lightbox-image-wrapper img {
+    width: 100%;
+    height: auto;          /* stop the forced vertical expansion */
+    max-height: none;      /* allow natural proportions */
+  }
+
   .lightbox-sidebar {
     min-width: 0;
     max-width: none;
     width: 100%;
     padding: 60px 20px 20px 20px;
-  }
-
-  /* Image column takes full width on mobile as well */
-  .lightbox-image-wrapper {
-    max-width: 100%;
   }
 
   #lightbox-close {
