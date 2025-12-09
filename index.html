@@ -99,7 +99,7 @@ h1, h2, h3 {
   background: #fff;
   padding: 40px 20px 20px 20px; /* top padding to clear the X */
   box-sizing: border-box;
-  display: none;
+  display: flex;
   flex-direction: column;
   justify-content: flex-start;
   position: relative;    /* anchors #lightbox-close */
@@ -177,7 +177,7 @@ h1, h2, h3 {
 .site-header nav a:hover {
   text-decoration: underline;
 }
-@media (max-width: 700px) { 
+@media (max-width: 350px) { 
   .lightbox-content { 
    flex-direction: column; 
    max-width: 95%; 
@@ -197,11 +197,8 @@ h1, h2, h3 {
 .lightbox-sidebar { 
   width: 100%; /* fill the row */ 
   padding: 40px 20px 20px 20px; 
-  box-sizing: 
-  border-box; 
-  position: 
-  relative; 
-  /* keeps the X positioned relative to sidebar */ 
+  box-sizing: border-box; 
+  position: relative; /* keeps the X positioned relative to sidebar */ 
   background: #fff; /* ensure full-width white */ 
 } 
 
