@@ -214,6 +214,41 @@ h1, h2, h3 {
   }
 }
 
+/* PORTRAIT ONLY — reorder into vertical stack */
+@media (orientation: portrait) {
+
+  .site-header {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+
+  /* Title first */
+  .site-title {
+    order: -1;
+    margin: 0;
+  }
+
+  /* Filters next */
+  .site-header > div {
+    order: 0;
+  }
+
+  /* Nav last */
+  .site-header nav {
+    order: 1;
+  }
+}
+
+/* LANDSCAPE — force desktop-style layout on phones/tablets */
+@media (orientation: landscape) {
+  .site-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+    
   
 </style>
     
