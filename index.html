@@ -181,37 +181,56 @@ h1, h2, h3 {
   text-decoration: underline;
 }
 
-@media (max-width: 600px) {
+/* Default desktop/landscape nav (unchanged) */
+header.site-header nav.site-nav {
+    display: flex;
+    justify-content: flex-end; /* your current desktop alignment */
+    gap: 20px;
+    font-weight: normal;
+}
 
-  .lightbox-content {
-    flex-direction: column;
-    max-height: none;      /* allow scrolling */
-    height: auto;
-  }
+/* PORTRAIT: center everything */
+@media (orientation: portrait) {
+    header.site-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* center horizontally */
+        gap: 16px;
+        width: 100%;
+    }
 
-  .lightbox-image-wrapper {
-    max-width: 100%;
-    width: 100%;
-    height: auto;
-  }
+    /* Title at top */
+    .site-title {
+        order: -1;
+        margin: 0;
+        text-align: center;
+    }
 
-  .lightbox-image-wrapper img {
-    width: 100%;
-    height: auto;          /* stop the forced vertical expansion */
-    max-height: none;      /* allow natural proportions */
-  }
+    /* Filters below title, same line */
+    .site-header > div {
+        order: 0;
+        display: flex;
+        flex-direction: row; /* same line */
+        align-items: center; /* vertical alignment */
+        justify-content: center; /* horizontal centering */
+        gap: 8px;
+    }
 
-  .lightbox-sidebar {
-    min-width: 0;
-    max-width: none;
-    width: 100%;
-    padding: 60px 20px 20px 20px;
-  }
+    /* Center nav at bottom of header */
+    nav.site-nav {
+        order: 1;
+        justify-content: center; /* center horizontally */
+        width: 100%;
+        font-weight: bold;       /* bold for mobile */
+        margin-top: 24px;
+    }
 
-  #lightbox-close {
-    right: 10px;
-    top: 10px;
-  }
+    main {
+        order: 2;
+        width: 100%;
+        display: flex;
+        justify-content: center; /* center gallery */
+    }
 }
 
 /* Desktop nav only for landscape / desktop */
@@ -304,13 +323,18 @@ h1, h2, h3 {
     <title>Rin Olson</title>
 </head>
 <body>
-    <header class="site-header">
+<header class="site-header">
     <h1 class="site-title">RIN OLSON</h1>
 
     <div>
         <select id="year-filter"></select>
         <button id="all-works-btn"><b>ALL WORKS</b></button>
     </div>
+
+    <nav class="site-nav">
+        <a href="about.html"><b>ABOUT</b></a> |
+        <a href="inquire.html"><b>INQUIRE</b></a>
+    </nav>
 </header>
 
 <main>
