@@ -94,7 +94,8 @@ h1, h2, h3 {
 /* SIDEBAR */  
 .lightbox-sidebar {
   width: 40%;            /* fixed width relative to container */
-  max-width: 350px;      /* optional: prevent it from getting too wide */
+  max-width: 350px; /* optional: prevent it from getting too wide */
+  min-width: 350px;
   background: #fff;
   padding: 40px 20px 20px 20px; /* top padding to clear the X */
   box-sizing: border-box;
@@ -176,39 +177,27 @@ h1, h2, h3 {
 .site-header nav a:hover {
   text-decoration: underline;
 }
-@media (max-width: 350px) { 
-  .lightbox-content { 
-   flex-direction: column; 
-   max-width: 95%; 
-   max-height: 95vh; 
-  } 
 
-.lightbox-image-wrapper { 
-  width: 100%; 
-  max-height: 60vh; /* keep images from being too tall */ 
-} 
-.lightbox-image-wrapper img { 
-  width: 100%; 
-  height: auto; 
-  object-fit: 
-  contain; 
-} 
-.lightbox-sidebar { 
-  width: 100%; /* fill the row */ 
-  padding: 40px 20px 20px 20px; 
-  box-sizing: border-box; 
-  position: relative; /* keeps the X positioned relative to sidebar */ 
-  background: #fff; /* ensure full-width white */ 
-} 
+@media (max-width: 600px) {
+  .lightbox-content {
+    flex-direction: column;
+    max-width: 95%;
+    max-height: 95vh;
+  }
 
-#lightbox-close { 
-  position: 
-  absolute; /* stay inside sidebar */ 
-  top: 10px; 
-  right: 10px; 
-  z-index: 10; 
-  color: white; 
-}
+  .lightbox-sidebar {
+    width: 100%;
+    max-width: none;
+    min-width: 0;        /* ← THIS TURNS OFF THE DESKTOP CONSTRAINT */
+    padding: 60px 20px 20px 20px;
+    background: #fff;
+  }
+
+  #lightbox-close {
+    right: 10px;
+    top: 10px;
+    color: black;
+  }
 }
 
   
