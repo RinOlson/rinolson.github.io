@@ -214,85 +214,41 @@ h1, h2, h3 {
   }
 }
 
-/* ============================================
-   PORTRAIT ORIENTATION (mobile)
-   Reorder layout: Title → Filters → Gallery → Nav
-   ============================================ */
+/* PORTRAIT ONLY — reorder into vertical stack */
 @media (orientation: portrait) {
 
-  /* Make the entire page flow vertically */
-  body {
-    display: flex;
-    flex-direction: column;
-  }
-
-  /* Header becomes a vertical stack */
-  header.site-header {
-    order: 0;
-    display: flex;
+  .site-header {
     flex-direction: column;
     align-items: center;
     gap: 16px;
-    width: 100%;
   }
 
-  /* Main/gallery appears AFTER the header */
-  main {
-    order: 1;
-    width: 100%;
-  }
-
-  /* Site title to the top of the header */
+  /* Title first */
   .site-title {
     order: -1;
     margin: 0;
-    text-align: center;
   }
 
-  /* Ensure filters (year selector + button group) stay below title */
+  /* Filters next */
   .site-header > div {
     order: 0;
   }
 
-  /* NAVIGATION → moved to the bottom of the page */
-  nav {
-    order: 2;
-    width: 100%;
-    text-align: center;
-    margin-top: 24px;
-    margin-bottom: 40px; /* gives a bit of breathing room */
-  }
-}
-/* Hide mobile nav by default */
-.mobile-nav {
-  display: none;
-}
-
-/* PORTRAIT: hide header nav, show bottom nav */
-@media (orientation: portrait) {
-  header.site-header nav {
-    display: none;
-  }
-  .mobile-nav {
-    display: block;
-    width: 100%;
-    text-align: center;
-    margin-top: 24px;
-    margin-bottom: 40px;
-    font-family: Arial, sans-serif;
-    font-size: 14px;
+  /* Nav last */
+  .site-header nav {
+    order: 1;
   }
 }
 
-/* LANDSCAPE: show header nav, hide bottom nav */
+/* LANDSCAPE — force desktop-style layout on phones/tablets */
 @media (orientation: landscape) {
-  header.site-header nav {
-    display: flex;
-  }
-  .mobile-nav {
-    display: none;
+  .site-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
 }
+
     
   
 </style>
@@ -322,11 +278,6 @@ h1, h2, h3 {
   </div>
 </main>
     
-<nav class="mobile-nav">
-  <a href="about.html"><b>ABOUT</b></a> |
-  <a href="inquire.html"><b>INQUIRE</b></a>
-</nav>
-
 <div id="lightbox" class="lightbox hidden">
     <div class="lightbox-content">
         <div class="lightbox-image-wrapper">
