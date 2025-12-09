@@ -189,118 +189,67 @@ header.site-header nav.site-nav {
     font-weight: normal;
 }
 
-/* PORTRAIT: center everything */
+/* Desktop / landscape: nav on right */
+header.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 50px 42px;
+}
+
+header.site-header nav.site-nav {
+    display: flex;
+    gap: 20px;
+}
+
+/* Filters row on desktop */
+header.site-header .filters {
+    display: flex;
+    gap: 10px;
+}
+
+/* PORTRAIT: center everything, title top, filters same line, nav below gallery */
 @media (orientation: portrait) {
     header.site-header {
-        display: flex;
         flex-direction: column;
-        align-items: center; /* center horizontally */
+        align-items: center;
         gap: 16px;
-        width: 100%;
     }
 
-    /* Title at top */
+    /* Title first */
     .site-title {
         order: -1;
-        margin: 0;
         text-align: center;
+        margin: 0;
     }
 
-    /* Filters below title, same line */
-    .site-header > div {
+    /* Filters on same line, centered */
+    .filters {
         order: 0;
         display: flex;
-        flex-direction: row; /* same line */
-        align-items: center; /* vertical alignment */
-        justify-content: center; /* horizontal centering */
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
         gap: 8px;
-    }
-
-    /* Center nav at bottom of header */
-    nav.site-nav {
-        order: 1;
-        justify-content: center; /* center horizontally */
         width: 100%;
-        font-weight: bold;       /* bold for mobile */
-        margin-top: 24px;
     }
 
     main {
-        order: 2;
-        width: 100%;
+        order: 1;
         display: flex;
-        justify-content: center; /* center gallery */
+        justify-content: center;
+        width: 100%;
     }
-}
 
-/* Desktop nav only for landscape / desktop */
-.desktop-nav {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  font-family: Arial, sans-serif;
-  font-size: 14px;
-}
-
-/* Hide mobile nav by default */
-.mobile-nav {
-  display: none;
-  font-family: Arial, sans-serif;
-  font-size: 14px;
-  text-align: center;
-  margin-top: 24px;
-  margin-bottom: 40px;
-}
-
-@media (orientation: portrait) {
-
-  header.site-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* center everything horizontally */
-    gap: 16px;
-    width: 100%;
-  }
-
-  /* Title at the top, centered */
-  .site-title {
-    order: -1;
-    margin: 0;
-    text-align: center;
-  }
-
-  /* Filters (year selector + button) on same line, centered */
-  .site-header > div {
-    order: 0;
-    display: flex;           /* keep on same row */
-    flex-direction: row;     /* horizontal row */
-    align-items: center;     /* vertical alignment */
-    justify-content: center; /* center horizontally */
-    gap: 8px;                /* space between selector and button */
-    width: 100%;             /* optional, helps centering */
-  }
-
-  /* Main/gallery */
-  main {
-    order: 1;
-    width: 100%;
-    display: flex;
-    justify-content: center; /* center the gallery horizontally */
-  }
-
-  /* Mobile nav at the bottom */
-  .mobile-nav {
-    order: 2;
-    display: block;
-    width: 100%;
-    text-align: center;
-    margin-top: 24px;
-    margin-bottom: 40px;
-  }
-
-  .desktop-nav {
-    display: none;
-  }
+    nav.site-nav {
+        order: 2;
+        justify-content: center;
+        width: 100%;
+        margin-top: 24px;
+        font-weight: bold;
+    }
 }
 
 /* LANDSCAPE: show desktop nav, hide mobile nav */
@@ -313,9 +262,6 @@ header.site-header nav.site-nav {
   }
 }
 
-
-    
-  
 </style>
     
     <meta charset="UTF-8">
@@ -326,28 +272,22 @@ header.site-header nav.site-nav {
 <header class="site-header">
     <h1 class="site-title">RIN OLSON</h1>
 
-    <div>
+    <div class="filters">
         <select id="year-filter"></select>
         <button id="all-works-btn"><b>ALL WORKS</b></button>
     </div>
+
+    <nav class="site-nav">
+        <a href="about.html"><b>ABOUT</b></a> |
+        <a href="inquire.html"><b>INQUIRE</b></a>
+    </nav>
 </header>
 
 <main>
-  <div class="gallery-container">
-      <div id="gallery" class="gallery-grid"></div>
-  </div>
+    <div class="gallery-container">
+        <div id="gallery" class="gallery-grid"></div>
+    </div>
 </main>
-
-<main>
-  <div class="gallery-container">
-      <div id="gallery" class="gallery-grid"></div>
-  </div>
-</main>
-
-<nav class="mobile-nav">
-  <a href="about.html"><b>ABOUT</b></a> |
-  <a href="inquire.html"><b>INQUIRE</b></a>
-</nav>
 
 <div id="lightbox" class="lightbox hidden">
     <div class="lightbox-content">
@@ -361,6 +301,7 @@ header.site-header nav.site-nav {
     </div>
 </div>
 
-    <script src="js/gallery.js"></script>
+<script src="js/gallery.js"></script>
+
 </body>
 </html>
