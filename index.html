@@ -182,12 +182,12 @@ h1, h2, h3 {
 }
 
 @media (max-width: 600px) {
-  .lightbox-content {
-    flex-direction: column;
-    max-width: 95%;
-    max-height: 95vh;
+  .lightbox .lightbox-content .lightbox-sidebar {
+    min-width: 0;
+    width: 100%;
+    max-width: none;
   }
-
+    
   .lightbox-sidebar {
     width: 100%;
     max-width: none;
