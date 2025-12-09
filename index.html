@@ -207,8 +207,51 @@ h1, h2, h3 {
     width: 100%;
     padding: 60px 20px 20px 20px;
   }
+
+/* Default mobile layout (portrait) = nav stays below gallery */
+.site-nav {
+  display: block;
+  text-align: center;
+  margin: 30px 0;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
 }
 
+/* Desktop + landscape: put nav visually in the header */
+@media (min-width: 700px) {
+  .site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .site-nav {
+    position: absolute;
+    right: 42px;
+    top: 50px;         /* aligns with header padding */
+    margin: 0;
+  }
+}
+
+@media (max-width: 700px) and (orientation: portrait) {
+
+  .site-header {
+    display: block;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .site-title {
+    margin-bottom: 15px;
+  }
+
+  .header-left {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+}
+    
   
 </style>
     
@@ -219,24 +262,24 @@ h1, h2, h3 {
 <body>
     
     <header class="site-header">
-        <div>
-            <select id="year-filter"></select>
-            <button id="all-works-btn"><b>ALL WORKS</b></button>
-        </div>
-      
-        <h1 class="site-title">RIN OLSON</h1>
+    <div class="header-left">
+        <select id="year-filter"></select>
+        <button id="all-works-btn"><b>ALL WORKS</b></button>
+    </div>
 
-        <nav>
-            <a href="about.html"><b>ABOUT</b></a> |
-            <a href="inquire.html"><b>INQUIRE</b></a>
-        </nav>
-    </header>
+    <h1 class="site-title">RIN OLSON</h1>
+</header>
 
 <main>
   <div class="gallery-container">
       <div id="gallery" class="gallery-grid"></div>
   </div>
 </main>
+
+<nav class="site-nav">
+    <a href="about.html"><b>ABOUT</b></a> |
+    <a href="inquire.html"><b>INQUIRE</b></a>
+</nav>
 
 <div id="lightbox" class="lightbox hidden">
     <div class="lightbox-content">
