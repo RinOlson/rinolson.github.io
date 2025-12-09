@@ -214,6 +214,15 @@ h1, h2, h3 {
   }
 }
 
+/* Desktop nav only for landscape / desktop */
+.desktop-nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
 /* Hide mobile nav by default */
 .mobile-nav {
   display: none;
@@ -224,68 +233,26 @@ h1, h2, h3 {
   margin-bottom: 40px;
 }
 
-/* Make links bold in mobile nav */
-.mobile-nav a {
-  font-weight: bold;
-  text-decoration: none;
-  color: black;
-}
-
-
-/* PORTRAIT: reorder and center everything */
+/* PORTRAIT: hide desktop nav, show mobile nav */
 @media (orientation: portrait) {
-  header.site-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* center everything horizontally */
-    gap: 16px;
-    width: 100%;
+  .desktop-nav {
+    display: none;
   }
-
-  /* Title at the top */
-  .site-title {
-    order: -1;
-    margin: 0;
-    text-align: center;
-  }
-
-  /* Filters (year selector + button) below title, centered */
-  .site-header > div {
-    order: 0;
-    display: flex;
-    flex-direction: column; /* stack vertically on mobile */
-    align-items: center;    /* center horizontally */
-    gap: 8px;
-  }
-
-  /* Main/gallery */
-  main {
-    order: 1;
-    width: 100%;
-    display: flex;
-    justify-content: center; /* center the gallery horizontally */
-  }
-
-  /* Mobile nav at the bottom */
   .mobile-nav {
-    order: 2;
     display: block;
-    width: 100%;
-    text-align: center;
-    margin-top: 24px;
-    margin-bottom: 40px;
   }
 }
 
-/* LANDSCAPE: show header nav, hide bottom nav */
+/* LANDSCAPE: show desktop nav, hide mobile nav */
 @media (orientation: landscape) {
-  header.site-header nav {
+  .desktop-nav {
     display: flex;
   }
   .mobile-nav {
     display: none;
   }
 }
+
 
     
   
@@ -297,18 +264,31 @@ h1, h2, h3 {
 </head>
 <body>
     <header class="site-header">
-        <div>
-            <select id="year-filter"></select>
-            <button id="all-works-btn"><b>ALL WORKS</b></button>
-        </div>
-      
-        <h1 class="site-title">RIN OLSON</h1>
+    <h1 class="site-title">RIN OLSON</h1>
 
-        <nav>
-            <a href="about.html"><b>ABOUT</b></a> |
-            <a href="inquire.html"><b>INQUIRE</b></a>
-        </nav>
-    </header>
+    <div>
+        <select id="year-filter"></select>
+        <button id="all-works-btn"><b>ALL WORKS</b></button>
+    </div>
+
+    <!-- Desktop / Landscape nav -->
+    <nav class="desktop-nav">
+        <a href="about.html"><b>ABOUT</b></a> |
+        <a href="inquire.html"><b>INQUIRE</b></a>
+    </nav>
+</header>
+
+<main>
+  <div class="gallery-container">
+      <div id="gallery" class="gallery-grid"></div>
+  </div>
+</main>
+
+<!-- Mobile portrait nav -->
+<nav class="mobile-nav">
+  <a href="about.html"><b>ABOUT</b></a> |
+  <a href="inquire.html"><b>INQUIRE</b></a>
+</nav>
 
 <main>
   <div class="gallery-container">
