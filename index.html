@@ -214,45 +214,55 @@ h1, h2, h3 {
   }
 }
 
-/* PORTRAIT ONLY — restructure layout */
+/* ============================================
+   PORTRAIT ORIENTATION (mobile)
+   Reorder layout: Title → Filters → Gallery → Nav
+   ============================================ */
 @media (orientation: portrait) {
 
-  /* Make the top-level layout flexible */
+  /* Make the entire page flow vertically */
   body {
     display: flex;
     flex-direction: column;
   }
 
-  /* Stack header contents vertically (from before) */
-  .site-header {
+  /* Header becomes a vertical stack */
+  header.site-header {
+    order: 0;
+    display: flex;
     flex-direction: column;
     align-items: center;
     gap: 16px;
+    width: 100%;
   }
 
+  /* Main/gallery appears AFTER the header */
+  main {
+    order: 1;
+    width: 100%;
+  }
+
+  /* Site title to the top of the header */
   .site-title {
     order: -1;
     margin: 0;
+    text-align: center;
   }
 
+  /* Ensure filters (year selector + button group) stay below title */
   .site-header > div {
-    order: 0;   /* year selector + button */
+    order: 0;
   }
 
-  /* Move the nav BELOW the gallery */
-  .site-header nav {
-    order: 2;        /* move it to bottom *inside header* */
+  /* NAVIGATION → moved to the bottom of the page */
+  nav {
+    order: 2;
     width: 100%;
     text-align: center;
-    margin-top: 20px;
-  }
-
-  /* Put main content before nav */
-  main {
-    order: 1;
+    margin-top: 24px;
+    margin-bottom: 40px; /* gives a bit of breathing room */
   }
 }
-
 
 /* LANDSCAPE — force desktop-style layout on phones/tablets */
 @media (orientation: landscape) {
