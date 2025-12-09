@@ -231,13 +231,49 @@ h1, h2, h3 {
   color: black;
 }
 
-/* PORTRAIT: hide header nav, show bottom nav */
+
+/* PORTRAIT: reorder and center everything */
 @media (orientation: portrait) {
-  header.site-header nav {
-    display: none;
+  header.site-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* center everything horizontally */
+    gap: 16px;
+    width: 100%;
   }
+
+  /* Title at the top */
+  .site-title {
+    order: -1;
+    margin: 0;
+    text-align: center;
+  }
+
+  /* Filters (year selector + button) below title, centered */
+  .site-header > div {
+    order: 0;
+    display: flex;
+    flex-direction: column; /* stack vertically on mobile */
+    align-items: center;    /* center horizontally */
+    gap: 8px;
+  }
+
+  /* Main/gallery */
+  main {
+    order: 1;
+    width: 100%;
+    display: flex;
+    justify-content: center; /* center the gallery horizontally */
+  }
+
+  /* Mobile nav at the bottom */
   .mobile-nav {
+    order: 2;
     display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 24px;
+    margin-bottom: 40px;
   }
 }
 
