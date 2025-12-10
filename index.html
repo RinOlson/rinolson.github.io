@@ -216,7 +216,46 @@ h1, h2, h3 {
   font-family: Arial, sans-serif;
   font-size: 14px;
 }
+}
 
+/* MOBILE PORTRAIT ONLY */
+@media (max-width: 700px) and (orientation: portrait) {
+
+  /* Stack header contents */
+  .site-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 12px;
+  }
+
+  /* Reorder items explicitly */
+  .site-title {
+    order: 1;
+    text-align: center;
+  }
+
+  .site-header > div {
+    order: 2;
+    display: flex;
+    gap: 10px;
+  }
+
+  /* Hide header nav completely */
+  .site-header nav {
+    display: none;
+  }
+
+  /* Show footer nav */
+  .footer-nav {
+    display: block;
+    text-align: center;
+    margin: 30px 0;
+  }
+}
+    
+    
 /* Desktop + landscape: put nav visually in the header */
 @media (min-width: 700px) {
   .site-header {
