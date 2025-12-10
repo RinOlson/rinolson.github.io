@@ -218,36 +218,41 @@ h1, h2, h3 {
 }
 }
 
-/* MOBILE PORTRAIT ONLY */
+/* MOBILE PORTRAIT ONLY — FORCE ORDER */
 @media (max-width: 700px) and (orientation: portrait) {
 
-  /* Stack header contents */
   .site-header {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 20px;
     gap: 12px;
+    width: 100%;
+    position: relative;
   }
 
-  /* Reorder items explicitly */
+  /* TITLE FIRST */
   .site-title {
-    order: 1;
+    order: 1 !important;
+    width: 100%;
     text-align: center;
   }
 
+  /* FILTER + ALL WORKS SECOND */
   .site-header > div {
-    order: 2;
+    order: 2 !important;
     display: flex;
+    justify-content: center;
+    width: 100%;
     gap: 10px;
   }
 
-  /* Hide header nav completely */
+  /* Hide header nav entirely */
   .site-header nav {
-    display: none;
+    display: none !important;
   }
 
-  /* Show footer nav */
+  /* Footer nav visible */
   .footer-nav {
     display: block;
     text-align: center;
@@ -256,21 +261,39 @@ h1, h2, h3 {
 }
     
     
-/* Desktop + landscape: put nav visually in the header */
-@media (min-width: 700px) {
+/* DESKTOP / LANDSCAPE */
+@media (min-width: 700px), (orientation: landscape) {
+
   .site-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative; /* needed for absolute centering */
+    padding: 50px 42px;
   }
 
-  .site-nav {
+  /* Title centered to page */
+  .site-title {
     position: absolute;
-    right: 42px;
-    top: 50px;         /* aligns with header padding */
+    left: 50%;
+    transform: translateX(-50%);
     margin: 0;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  /* Header nav visible */
+  .site-header nav {
+    display: flex;
+    gap: 20px;
+  }
+
+  /* Hide footer nav on desktop */
+  .footer-nav {
+    display: none;
   }
 }
+
 
 @media (max-width: 700px) and (orientation: portrait) {
 
