@@ -252,6 +252,31 @@ h1, h2, h3 {
   }
 }
     
+/* Desktop and mobile LANDSCAPE */
+@media (min-width: 700px), (orientation: landscape) {
+  .site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* Show header nav on desktop */
+  .site-header nav {
+    display: flex;
+  }
+
+  /* Hide footer nav */
+  .footer-nav {
+    display: none;
+  }
+
+  /* Keep title centered vertically */
+  .site-title {
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+    
   
 </style>
     
