@@ -1,119 +1,213 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- 
+<meta charset="UTF-8">
+<title>About</title>
 <link rel="stylesheet" href="css/styles.css">
-  
 <style>
+  /* --- Global styles --- */
   body {
     font-family: Arial, sans-serif !important;
     font-size: 14px;
+    margin: 0;
+    padding: 0;
   }
   h1, h2, h3 {
     font-family: Arial, sans-serif !important;
     font-size: 20px;
-} 
+    margin: 0;
+  }
 
-.site-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 30px 40px;   /* spacing from edges + pushes portrait down */
-}  
+  /* --- Header --- */
+  .site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 40px;
+    position: relative;
+  }
 
-/* left-side link styling */
-.site-header > div a {
-  font-family: Arial, sans-serif;
-  font-size: 14px;
-  text-decoration: none;
-  color: black;
-  font-weight: bold;
-}
-/* nav links on right */
-.site-header nav {
-  display: flex;
-  gap: 20px;
-  font-family: Arial, sans-serif;
-  font-size: 14px;
-  align-items: center;
-}
+  .site-header > div a {
+    font-weight: bold;
+    font-size: 14px;
+    color: black;
+    text-decoration: none;
+  }
 
-/* individual nav links */
-.site-header nav a {
-  text-decoration: none;
-  color: black;
-}
+  .site-header nav {
+    display: flex;
+    gap: 20px;
+    font-size: 14px;
+    align-items: center;
+  }
 
-/* underline the current page */
-.site-header nav a.current-page {
-  text-decoration: underline;
-}
+  .site-header nav a {
+    text-decoration: none;
+    color: black;
+  }
 
-/* hover effect */
-.site-header nav a:hover {
-  text-decoration: underline;
-}  
-  
-.about-container {
-  display: flex;
-  flex-wrap: wrap;        /* allows stacking on small screens */
-  gap: 20px;              /* space between portrait and bio */
-  max-width: 1000px;      /* optional: match grid width */
-  margin: 0 auto;
-  margin-top: 40px;   /* ← pushes portrait + text downward */
-  justify-content: center;
-}
+  .site-header nav a.current-page {
+    text-decoration: underline;
+  }
 
-.about-portrait {
-  flex: 1 1 300px;        /* min width 300px, grow to fill space */
-  max-width: 400px;       /* optional: prevent it from getting too big */
-  height: auto;
-  object-fit: cover;
-}
+  .site-header nav a:hover {
+    text-decoration: underline;
+  }
 
-.about-bio {
-  flex: 2 1 200px; /* larger column for text */
-  max-width: 400px;   /* ← controls the right-hand margin */
-  font-family: Arial, sans-serif;
-  font-size: 14px;
-  line-height: 1.6;
-}
-  p {
-  text-align: justify;
-}
- 
+  .site-title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    font-size: 1.5rem;
+  }
 
-  
+  /* --- About container --- */
+  .about-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1000px;
+    margin: 40px auto 0 auto;
+    justify-content: center;
+  }
+
+  .about-portrait {
+    flex: 1 1 300px;
+    max-width: 400px;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .about-bio {
+    flex: 2 1 200px;
+    max-width: 400px;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .about-bio p {
+    text-align: justify;
+  }
+
+  /* --- Footer nav (mobile only) --- */
+  .footer-nav {
+    display: none; /* hidden by default */
+    justify-content: center;
+    gap: 12px;
+    margin: 28px 0;
+    font-size: 14px;
+  }
+
+  .footer-nav a {
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    padding: 0 6px;
+  }
+
+  /* ------------------------------
+     MOBILE PORTRAIT
+  ------------------------------ */
+  @media (max-width: 699px) and (orientation: portrait) {
+
+    .site-header {
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center !important;
+      justify-content: flex-start;
+      padding: 20px 16px;
+      gap: 10px;
+      width: 100%;
+    }
+
+    /* Title first */
+    .site-title {
+      order: 1 !important;
+      position: static !important;
+      transform: none !important;
+      width: 100%;
+      text-align: center;
+      margin: 0;
+      font-size: 1.4rem;
+      line-height: 1.1;
+      white-space: normal;
+    }
+
+    /* Portfolio link second */
+    .site-header > div {
+      order: 2 !important;
+      display: flex !important;
+      justify-content: center !important;
+      width: 100%;
+    }
+
+    /* Hide header nav */
+    .site-header nav {
+      display: none !important;
+    }
+
+    /* Show footer nav */
+    .footer-nav {
+      display: flex !important;
+      flex-wrap: wrap;
+      justify-content: center !important;
+      text-align: center;
+    }
+  }
+
+  /* ------------------------------
+     DESKTOP / LANDSCAPE
+  ------------------------------ */
+  @media (min-width: 700px), (orientation: landscape) {
+    .footer-nav {
+      display: none !important;
+    }
+
+    .site-title {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .site-header nav {
+      display: flex !important;
+      gap: 20px;
+      align-items: center;
+    }
+  }
 </style>
-    <meta charset="UTF-8">
-    <title>About</title>
 </head>
 <body>
 
   <header class="site-header">
-  <div>
-    <a href="index.html" class="back-to-portfolio"><b>PORTFOLIO</b></a>
-  </div>
+    <div>
+      <a href="index.html"><b>PORTFOLIO</b></a>
+    </div>
 
-  <h1 class="site-title">RIN OLSON</h1>
-    
-  <nav>
+    <h1 class="site-title">RIN OLSON</h1>
+
+    <nav>
+      <a href="about.html" class="current-page"><b>ABOUT</b></a>
+      <a href="inquire.html"><b>INQUIRE</b></a>
+    </nav>
+  </header>
+
+  <main class="about-page">
+    <div class="about-container">
+      <img src="assets/images/portrait.jpg" alt="Rin Olson Portrait" class="about-portrait">
+      <div class="about-bio">
+        <p>Rin Olson is a San Francisco–based visual artist. Drawing inspiration from her musical background and the natural world, Rin’s work explores the interplay of color theory, rhythm, improvisation, and harmonic tension and resolution. By transforming the auditory world into the visual, she creates abstract landscapes and structures that evoke the often overlooked dimensions of nature. Since 2021, her focus has been on transcribing birdsongs.<br><br>
+        Much like a piece of music follows a particular key and time signature, each composition contains an elemental structure tying color and form together. This gives each piece an apparent, though ambiguous, logic that invites viewers to reflect on connectivity, perception, and the ephemeral qualities of color and sound. Influences include Etel Adnan, Richard Diebenkorn, Mark Rothko, Helen Frankenthaler, and Josef Albers.</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer nav for mobile portrait -->
+  <nav class="footer-nav">
     <a href="about.html" class="current-page"><b>ABOUT</b></a>
     <a href="inquire.html"><b>INQUIRE</b></a>
   </nav>
-</header>
-
-
-  
-  <main class="about-page">
-  <div class="about-container">
-    <img src="assets/images/portrait.jpg" alt="Rin Olson Portrait" class="about-portrait">
-    <div class="about-bio">
-       <p>Rin Olson is a San Francisco–based visual artist. Drawing inspiration from her musical background and the natural world, Rin’s work explores the interplay of color theory, rhythm, improvisation, and harmonic tension and resolution. By transforming the auditory world into the visual, she creates abstract landscapes and structures that evoke the often overlooked dimensions of nature. Since 2021, her focus has been on transcribing birdsongs.<br><br>
-            Much like a piece of music follows a particular key and time signature, each composition contains an elemental structure tying color and form together. This gives each piece an apparent, though ambiguous, logic that invites viewers to reflect on connectivity, perception, and the ephemeral qualities of color and sound. Influences include Etel Adnan, Richard Diebenkorn, Mark Rothko, Helen Frankenthaler, and Josef Albers.</p>
-    </div>
-  </div>
-</main>
 
 </body>
 </html>
