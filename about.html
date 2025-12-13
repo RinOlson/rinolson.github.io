@@ -81,141 +81,6 @@
   p {
   text-align: justify;
 }
-
-
-@media (min-width: 700px), (orientation: landscape) {
-
-  .site-header {
-    position: relative;
-  }
-
-  .site-title {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    margin: 0;
-    white-space: nowrap;
-  }
-
-  .footer-nav {
-    display: none;
-  }
-}
-
-@media (max-width: 699px) and (orientation: portrait) {
-
-  .site-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px 16px;
-    gap: 12px;
-  }
-
-  /* Title first */
-  .site-title {
-    order: 1;
-    width: 100%;
-    text-align: center;
-    margin: 0;
-  }
-
-  /* Portfolio link second */
-  .site-header > div {
-    order: 2;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-  }
-
-  /* Hide header nav */
-  .site-header nav {
-    display: none;
-  }
-
-  /* Footer nav visible and centered */
-  .footer-nav {
-    display: flex;
-    justify-content: center;
-    gap: 12px;
-    margin: 28px 0;
-    font-size: 14px;
-  }
-
-  .footer-nav a {
-    text-decoration: none;
-    color: black;
-    padding: 0 6px;
-  }
-
-  /* Defensive reset in case desktop rules leak */
-  .site-title {
-    position: static;
-    transform: none;
-  }
-}
-
-/* Desktop / landscape — header visible, footer hidden */
-@media (min-width: 700px) {
-  .header-nav {
-    display: flex;
-  }
-  .footer-nav {
-    display: none;
-  }
-
-  .site-title {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-}
-
-/* Mobile portrait — header hidden, footer visible */
-@media (max-width: 699px) and (orientation: portrait) {
-  .header-nav {
-    display: none;
-  }
-
-  .footer-nav {
-    display: flex;
-    justify-content: center;
-    gap: 12px;
-    margin: 28px 0;
-    font-size: 14px;
-    width: 100%;
-    text-align: center;
-  }
-
-  .footer-nav a {
-    text-decoration: none;
-    color: black;
-    padding: 0 6px;
-  }
-
-  /* Stack header items: title first, portfolio link second */
-  .site-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px 16px;
-    gap: 12px;
-  }
-
-  .site-title {
-    order: 1;
-    width: 100%;
-    text-align: center;
-    margin: 0;
-  }
-
-  .site-header > div {
-    order: 2;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-  }
-}
  
 
   
@@ -232,7 +97,7 @@
 
   <h1 class="site-title">RIN OLSON</h1>
     
-  <nav class="header-nav">…</nav>
+  <nav>
     <a href="about.html" class="current-page"><b>ABOUT</b></a>
     <a href="inquire.html"><b>INQUIRE</b></a>
   </nav>
@@ -249,11 +114,6 @@
     </div>
   </div>
 </main>
-  
-  <nav class="footer-nav">
-  <a href="about.html" class="current-page"><b>ABOUT</b></a> |
-  <a href="inquire.html"><b>INQUIRE</b></a>
-</nav>
 
 </body>
 </html>
