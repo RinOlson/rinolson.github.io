@@ -120,17 +120,19 @@
       display: none !important;
     }
 
-    /* Footer nav visible and centered */
-    .footer-nav {
-      display: flex !important;
-      justify-content: center !important;
-      gap: 12px;
-      width: 100%;
-      text-align: center;
-      margin: 28px 0;
-      padding: 0 16px;
-      font-size: 14px;
-    }
+ /* Footer nav visible and centered on mobile */
+  .footer-nav {
+     display: flex !important;
+     justify-content: center !important;
+     gap: 12px;
+     width: 100%;
+     max-width: 420px;       /* match content width */
+     margin: 28px auto;      /* auto left/right centers it */
+     padding: 0 16px;
+     text-align: center;
+     font-size: 14px;
+   }
+
 
     .footer-nav a {
       display: inline-block;
