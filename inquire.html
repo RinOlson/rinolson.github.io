@@ -6,9 +6,6 @@
 <title>INQUIRE</title>
 
 <style>
-  /* ------------------------------
-     BASE STYLES
-     ------------------------------ */
   body {
     font-family: Arial, sans-serif !important;
     font-size: 14px;
@@ -27,20 +24,22 @@
     justify-content: space-between;
     align-items: center;
     padding: 30px 40px;
+    flex-wrap: wrap;
+    gap: 10px;
   }
 
+  /* Left-side link styling */
   .site-header > div a {
-    font-family: Arial, sans-serif;
     font-size: 14px;
     text-decoration: none;
     color: black;
     font-weight: bold;
   }
 
+  /* Top nav */
   .site-header nav {
     display: flex;
     gap: 20px;
-    font-family: Arial, sans-serif;
     font-size: 14px;
     align-items: center;
   }
@@ -58,47 +57,37 @@
     text-decoration: underline;
   }
 
-  .inquire-container {
+  main.inquire-container {
     display: flex;
     justify-content: center;
-    margin: 40px 20px; /* breathing room */
+    text-align: center;
+    margin: 40px 20px;  /* breathing room on all sides */
   }
 
   .inquire-text {
-    flex: 2 1 400px;
-    font-family: Arial, sans-serif;
-    font-size: 14px;
+    max-width: 500px;  /* constrain width for readability */
     line-height: 1.6;
-    text-align: center;
   }
 
+  /* Footer nav hidden by default (desktop) */
   .footer-nav {
-    display: none; /* hidden on desktop */
+    display: none;
   }
 
   /* ------------------------------
-     MOBILE / PORTRAIT
+     MOBILE PORTRAIT
      ------------------------------ */
   @media (max-width: 699px) and (orientation: portrait) {
 
-    .site-header, .site-header * {
-      box-sizing: border-box;
-    }
-
     .site-header {
-      display: flex !important;
-      flex-direction: column !important;
-      align-items: center !important;
-      justify-content: flex-start;
+      flex-direction: column;
+      align-items: center;
       padding: 18px 16px;
       gap: 10px;
-      width: 100%;
-      position: relative;
     }
 
-    /* Title first */
     .site-title {
-      order: 1 !important;
+      order: 1;
       width: 100%;
       text-align: center;
       margin: 0;
@@ -107,32 +96,29 @@
       white-space: normal;
     }
 
-    /* Portfolio link second */
     .site-header > div {
-      order: 2 !important;
+      order: 2;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+
+    .site-header nav {
+      display: none;  /* hide top nav on mobile */
+    }
+
+    /* Footer nav visible and perfectly centered */
+    .footer-nav {
       display: flex !important;
       justify-content: center !important;
+      gap: 12px;
       width: 100%;
+      max-width: 420px;       /* aligns nicely with text content */
+      margin: 28px auto;      /* auto left/right centers it */
+      padding: 0 16px;
+      text-align: center;
+      font-size: 14px;
     }
-
-    /* Hide header nav on mobile */
-    .site-header nav {
-      display: none !important;
-    }
-
- /* Footer nav visible and centered on mobile */
-  .footer-nav {
-     display: flex !important;
-     justify-content: center !important;
-     gap: 12px;
-     width: 100%;
-     max-width: 420px;       /* match content width */
-     margin: 28px auto;      /* auto left/right centers it */
-     padding: 0 16px;
-     text-align: center;
-     font-size: 14px;
-   }
-
 
     .footer-nav a {
       display: inline-block;
@@ -141,74 +127,50 @@
       padding: 0 6px;
       line-height: 1;
     }
-
-    /* Defensive reset */
-    .site-title, .site-header nav, .site-header > div {
-      position: static !important;
-      left: auto !important;
-      transform: none !important;
-    }
-
-    /* Add horizontal padding to text */
-    .inquire-container {
-      margin: 40px 16px;
-    }
   }
 
   /* ------------------------------
      DESKTOP / LANDSCAPE
      ------------------------------ */
   @media (min-width: 700px), (orientation: landscape) {
-    .footer-nav {
-      display: none !important;
-    }
-
-    .site-header {
-      position: relative;
-      padding: 30px 40px;
-    }
-
     .site-title {
-      position: static;
-      transform: none;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      margin: 0;
       white-space: nowrap;
-    }
-
-    .site-header nav {
-      display: flex !important;
-      gap: 20px;
-      align-items: center;
     }
   }
 
 </style>
-
 </head>
 <body>
 
-<header class="site-header">
-  <div>
-    <a href="index.html" class="back-to-portfolio"><b>PORTFOLIO</b></a>
-  </div>
+  <header class="site-header">
+    <div>
+      <a href="index.html" class="back-to-portfolio"><b>PORTFOLIO</b></a>
+    </div>
 
-  <h1 class="site-title">RIN OLSON</h1>
+    <h1 class="site-title">RIN OLSON</h1>
 
-  <nav>
-    <a href="about.html"><b>ABOUT</b></a>
+    <nav>
+      <a href="about.html"><b>ABOUT</b></a>
+      <a href="inquire.html" class="current-page"><b>INQUIRE</b></a>
+    </nav>
+  </header>
+
+  <main class="inquire-container">
+    <div class="inquire-text">
+      <p>Please direct sales inquiries to Hang Art in San Francisco: 
+        <a href="mailto:info@hangart.com">info@hangart.com</a>
+      </p>
+    </div>
+  </main>
+
+  <nav class="footer-nav">
+    <a href="about.html"><b>ABOUT</b></a> |
     <a href="inquire.html" class="current-page"><b>INQUIRE</b></a>
   </nav>
-</header>
-
-<main class="inquire-container">
-  <div class="inquire-text">
-    <p>Please direct sales inquiries to Hang Art in San Francisco: <a href="mailto:info@hangart.com">info@hangart.com</a></p>
-  </div>
-</main>
-
-<nav class="footer-nav">
-  <a href="about.html"><b>ABOUT</b></a>
-  <a href="inquire.html" class="current-page"><b>INQUIRE</b></a>
-</nav>
 
 </body>
 </html>
