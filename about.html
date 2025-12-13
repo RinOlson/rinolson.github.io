@@ -83,110 +83,10 @@
 }
 
 
-/* ------------------------------
-   MOBILE PORTRAIT: force order + centering
-   ------------------------------ */
-@media (max-width: 699px) and (orientation: portrait) {
-
-  /* Make sure everything uses a consistent box model */
-  .site-header, .site-header * {
-    box-sizing: border-box;
-  }
-
-  /* Stack header items vertically and center them */
-  .site-header {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: flex-start;
-    padding: 18px 16px;
-    gap: 10px;
-    position: relative;
-    width: 100%;
-  }
-
-  /* Title MUST be first, full width and centered */
-  .site-title {
-    order: 1 !important;
-    width: 100%;
-    text-align: center;
-    margin: 0;
-    font-size: 1.4rem;
-    line-height: 1.1;
-    white-space: normal;
-  }
-
-  /* Controls (year selector + button) second row; centered as a group */
-  .site-header > div, .header-left {
-    order: 2 !important;
-    display: flex !important;
-    justify-content: center !important;
-    gap: 10px;
-    width: 100%;
-    max-width: 420px; /* makes the controls line-break nicely on tiny screens */
-    padding: 0 8px;
-  }
-
-  /* Ensure select/button don't wrap awkwardly and visually align */
-  #year-filter, #all-works-btn {
-    display: inline-block;
-    vertical-align: middle;
-    transform: none !important;
-  }
-
-  /* Hide header nav on portrait mobile */
-  .site-header nav {
-    display: none !important;
-  }
-
-  /* Footer nav visible and perfectly centered under the gallery */
-  .footer-nav {
-    display: flex !important;
-    justify-content: center !important;
-    gap: 12px;
-    width: 100%;
-    text-align: center;
-    margin: 28px 0;
-    padding: 0 16px;
-    box-sizing: border-box;
-    font-size: 14px;
-  }
-
-  .footer-nav a {
-    display: inline-block;
-    text-decoration: none;
-    color: black;
-    padding: 0 6px;
-    line-height: 1;
-  }
-
-  /* If the footer nav has separators (|), ensure visual alignment */
-  .footer-nav::before,
-  .footer-nav::after {
-    content: "";
-  }
-
-  /* Defensive: prevent leftover absolute positioning (from desktop) interfering */
-  .site-title, .site-header nav, .site-header > div {
-    position: static !important;
-    left: auto !important;
-    transform: none !important;
-  }
-}
-
-/* ------------------------------
-   DESKTOP / LANDSCAPE: keep existing desktop rules, ensure header nav hidden from footer
-   ------------------------------ */
 @media (min-width: 700px), (orientation: landscape) {
-  /* Ensure footer nav is hidden on wider screens */
-  .footer-nav {
-    display: none !important;
-  }
 
-  /* Title absolute-centering for perfect page center (your working desktop rule) */
   .site-header {
     position: relative;
-    padding: 50px 42px;
   }
 
   .site-title {
@@ -197,13 +97,126 @@
     white-space: nowrap;
   }
 
-  /* restore header nav visibility */
-  .site-header nav {
-    display: flex !important;
-    gap: 20px;
-    align-items: center;
+  .footer-nav {
+    display: none;
   }
 }
+
+@media (max-width: 699px) and (orientation: portrait) {
+
+  .site-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 16px;
+    gap: 12px;
+  }
+
+  /* Title first */
+  .site-title {
+    order: 1;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+  }
+
+  /* Portfolio link second */
+  .site-header > div {
+    order: 2;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  /* Hide header nav */
+  .site-header nav {
+    display: none;
+  }
+
+  /* Footer nav visible and centered */
+  .footer-nav {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin: 28px 0;
+    font-size: 14px;
+  }
+
+  .footer-nav a {
+    text-decoration: none;
+    color: black;
+    padding: 0 6px;
+  }
+
+  /* Defensive reset in case desktop rules leak */
+  .site-title {
+    position: static;
+    transform: none;
+  }
+}
+
+/* Desktop / landscape — header visible, footer hidden */
+@media (min-width: 700px) {
+  .header-nav {
+    display: flex;
+  }
+  .footer-nav {
+    display: none;
+  }
+
+  .site-title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+/* Mobile portrait — header hidden, footer visible */
+@media (max-width: 699px) and (orientation: portrait) {
+  .header-nav {
+    display: none;
+  }
+
+  .footer-nav {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin: 28px 0;
+    font-size: 14px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .footer-nav a {
+    text-decoration: none;
+    color: black;
+    padding: 0 6px;
+  }
+
+  /* Stack header items: title first, portfolio link second */
+  .site-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 16px;
+    gap: 12px;
+  }
+
+  .site-title {
+    order: 1;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+  }
+
+  .site-header > div {
+    order: 2;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+}
+ 
 
   
 </style>
@@ -219,7 +232,7 @@
 
   <h1 class="site-title">RIN OLSON</h1>
     
-  <nav>
+  <nav class="header-nav">…</nav>
     <a href="about.html" class="current-page"><b>ABOUT</b></a>
     <a href="inquire.html"><b>INQUIRE</b></a>
   </nav>
