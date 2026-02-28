@@ -383,5 +383,42 @@
     "dimensions": "12 in x 14 in",
     "alt_text": "abstract cityscape"
   }
+
+        {
+    "filename": "Howl (fog).jpg",
+    "year": 2026,
+    "title": "Howl (fog)",
+    "media": "Oil on canvas",
+    "dimensions": "24 in x 17 in",
+    "alt_text": "abstract landscape"
+  }
+
+        {
+    "filename": "Howl (mist).jpg",
+    "year": 2026,
+    "title": "Howl (mist)",
+    "media": "Oil on canvas",
+    "dimensions": "24 in x 17 in",
+    "alt_text": "abstract landscape"
+  }   
+
+        {
+    "filename": "Howl (moon).jpg",
+    "year": 2026,
+    "title": "Howl (moon)",
+    "media": "Oil on canvas",
+    "dimensions": "21.5 in x 18.5 in",
+    "alt_text": "abstract landscape"
+  }  
+
+        {
+    "filename": "Howl (sunset).jpg",
+    "year": 2026,
+    "title": "Howl (sunset)",
+    "media": "Oil on canvas",
+    "dimensions": "22.5 in x 18 in",
+    "alt_text": "abstract landscape"
+  }      
+    
 ]
 
